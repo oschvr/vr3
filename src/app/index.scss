@@ -86,11 +86,28 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 }
 
 .work-section{
-
+  min-width: 100%;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .company-section{
 
+}
+
+.events-section{
+  min-width: 100%;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 2em;
+  p{
+    font-size: .6em;
+  }
+  img{
+    max-width: 100%;
+  }
 }
 
 .contact-section{
@@ -99,11 +116,17 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 
 .mailing-section{
   min-width: 100%;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
   text-align: center;
   background-color: #E4E4E4;
-  font-size: 2em;
+  font-size: 1.75em;
+  h3{
+    padding-bottom: 10px;
+  }
+  .mailing-input{
+    width: 400px;
+  }
 }
 
 .footer-section{
@@ -111,6 +134,63 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
   padding-bottom: 30px;
 }
 
+
+.section-title{
+  color: white;
+  padding-bottom: 10px;
+}
+
+.section-title-inverted{
+  color: #333333;
+  padding-bottom: 10px;
+}
+
+//Parallax Backgrounds
+
+.parallaxParent {
+  height: 100vh;
+  overflow: hidden;
+  }
+.parallaxParent > * {
+  height: 200%;
+  position: relative;
+  top: -100%;
+  }
+
+#bg0{
+  background-image: url(../assets/images/header.jpg);
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+#bg-work{
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-color: #F7F7F7;
+
+}
+#bg-events{
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-color: #19283f;
+  background-image: url(../assets/images/stars.png);
+}
+#bg3{
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-image: url(http://placehold.it/1024x720/e4e4e4);
+}
 
 //Bootstrap Buttons Enhancement: Outline
 
@@ -146,52 +226,6 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 .btn-warning.btn-outline:hover,
 .btn-danger.btn-outline:hover {
     color: #fff;
-}
-
-
-//Parallax Backgrounds
-
-.parallaxParent {
-  height: 100vh;
-  overflow: hidden;
-  }
-.parallaxParent > * {
-  height: 200%;
-  position: relative;
-  top: -100%;
-  }
-
-#bg0{
-  background-image: url(../assets/images/header.jpg);
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-#bg1{
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-image: url(http://placehold.it/1024x720/555555);
-}
-#bg2{
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-image: url(http://placehold.it/1024x720/000000);
-}
-#bg3{
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-image: url(http://placehold.it/1024x720/e4e4e4);
 }
 
 

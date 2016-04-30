@@ -68,7 +68,6 @@
     //Get all the events from the eventService to display in SPA
     function getEvents(){
       vm.events = eventsService.getEvents();
-      console.log(vm.events);
     }
   }
 })();

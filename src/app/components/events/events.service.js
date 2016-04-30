@@ -20,13 +20,13 @@
           'name': 'VR3 @ Campus Party 7',
           'excerpt': 'Presencia de VR3, el startup de VR en Campus Party',
           'url': 'http://mexico.campus-party.org/2016/noticias',
-          'image': '',
-          'video': '',
-          'tickets_url': 'http://mexico.campus-party.org/blog/2016/03/registro-de-comunidades',
+          'image': '../assets/images/events/cpmx7.png',
+          'tickets_url': 'http://mexico.campus-party.org/participa',
           'startDate': '1/Jul/2016',   //Date().toJSON()
           'endDate': '3/Jul/2016',     //Date().toJSON()
           'venue': 'Campus Party',
-          'location': '20.659965, 103.349149' //geopos (lat,long)
+          'lat': '20.659965',
+          'lon': '103.349149' //geopos (lat,long)
 
         }
       ];

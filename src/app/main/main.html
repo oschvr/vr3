@@ -51,24 +51,47 @@
     </div>
   </div>
 
-  <div id="parallax1" class="work-section parallaxParent">
-    <div id="bg1">
-      <div id="page-work"></div>
-    </div>
-  </div>
-
-
-  <div id="parallax2" class="events-section parallaxParent">
-    <div id="bg2">
-      <div id="page-events">
-        <div class="container">
-          <div class="row-fluid">
-            <div class="col-sm-4">
+    <div id="bg-work">
+      <div id="page-work">
+        <div class="container work-section">
+          <div class="row">
+            <h3 class="section-title-inverted">Proyectos y Trabajo</h3>
+            <div class="col-sm-4 col-xs-6" ng-repeat="work in works">
               <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">TEST</h3>
+                <div class="panel-body">
+                  <h2>{{work.title}}</h2>
+                  <a href="{{work.url}}" ng-hide="!work.url"><h5>{{work.client}}</h5></a>
+                  <h5>{{work.client}}</h5>
+
                 </div>
-                <div class="panel-body">SUPERTEST</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div id="bg-events">
+    <div id="page-events">
+      <div class="container events-section">
+        <div class="row-fluid">
+          <h3 class="section-title">Agenda de Eventos</h3>
+          <div class="col-sm-3 col-xs-4" ng-repeat="event in main.events">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><strong>{{event.name}}</strong></h3>
+              </div>
+              <div class="panel-body">
+                <img src="{{event.image}}" ng-hide="!event.image" href="{{event.url}}">
+                <p>{{event.excerpt}}</p>
+                <div class="alert alert-info"><p><strong>{{event.startDate}}</strong> - <strong>{{event.endDate}}</strong></p></div>
+
+                <form class="form-inline">
+                  <a href="{{event.url}}"><button class="btn btn-outline btn-success btn-lg">Evento</button></a>
+                  <a href="{{event.tickets_url}}"><button class="btn btn-outline btn-primary btn-lg">Tickets</button></a>
+                </form>
+
               </div>
             </div>
           </div>
@@ -77,7 +100,7 @@
     </div>
   </div>
 
-  <div id="parallax3" class="company-section parallaxParent">
+  <div class="company-section ">
     <div id="bg3">
       <div id="page-company"></div>
     </div>
@@ -94,21 +117,18 @@
     </div>
   </div>
 
-  <div class="mailing-section">
-    <div class="container">
-      <div class="row">
-        <h2>Suscríbete para recibir novedades, noticias de eventos, promociones y regalos</h2>
-        <form class="form">
-          <div class="col-sm-8">
-            <input class="form-control" placeholder="Correo Electronico"type="text" />
-          </div>
-          <div class="col-sm-4">
-            <div class="btn btn-danger">Enviar</div>
-          </div>
+  <div class="container mailing-section">
+    <div class="row">
+      <h3>Novedades, lanzamientos, eventos, promociones y regalos</h3>
+      <div class="col-sm-12">
+        <form class="form-inline">
+          <input class="form-control mailing-input" placeholder="Email"type="text" />
+          <button class="btn btn-outline btn-danger">Enviar</button>
         </form>
       </div>
     </div>
   </div>
+
 
   <div class="footer-section">
     <div class="container">
@@ -177,15 +197,4 @@
     .setTween("#parallax0 > div", {y: "100%", ease: Linear.easeNone})
     .addTo(controller);
 
-    new ScrollMagic.Scene({triggerElement: "#parallax1"})
-    .setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
-    .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "#parallax2"})
-    .setTween("#parallax2 > div", {y: "80%",  ease: Linear.easeNone})
-    .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "#parallax3"})
-    .setTween("#parallax3 > div", {y: "80%",  ease: Linear.easeNone})
-    .addTo(controller);
   </script>
