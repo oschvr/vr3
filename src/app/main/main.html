@@ -139,81 +139,38 @@
   <div class="contact-section">
     <div id="page-contact" class="container">
       <div class="row">
-        <form class="from-horizontal">
-
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="container mailing-section">
-    <div class="row">
-      <h3>Novedades, lanzamientos, eventos, promociones y regalos</h3>
-      <div class="col-sm-12">
-        <form class="form-inline">
-          <input class="form-control mailing-input" placeholder="Email"type="text" />
-          <button class="btn btn-outline btn-danger">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="footer-section">
-    <div class="container">
-      <div class="row center-block">
-        <div class="col-sm-2 col-xs-4">
-          <h2 class="logo-vr3">VR3</h2>
-          <ul class="list-unstyled">
-            <a href="http://facebook.com/vectorthree"><li><i class="fa fa-facebook"></i> Facebook</li></a>
-            <a href="http://twitter.com/vr3io"><li><i class="fa fa-twitter"></i> Twitter</li></a>
-            <a href="http://github.com/ostocino"><li><i class="fa fa-github"></i> Github</li></a>
-            <a href="snapchat://add/ostocino"><li><i class="fa fa-snapchat"></i> Snapchat</li></a>
-          </ul>
-        </div>
-        <div class="col-sm-2 col-xs-4">
-          <h4>SOPORTE</h4>
-          <ul class="list-unstyled">
-            <a href="#/problem"><li>Reportar Problema</li></a>
-            <a href="#/contact"><li>Contacto</li></a>
-            <a href="#/docs"><li>Documentación</li></a>
-          </ul>
-        </div>
-        <div class="col-sm-2 col-xs-4">
-        <h4>COMUNIDAD</h4>
-        <ul class="list-unstyled">
-          <a href="http://mxvr.co"><li>MXVR</li></a>
-          <a href="http://capitalvr.mx"><li>CapitalVR</li></a>
-          <a ng-click="main.gotoEvents()"><li>Eventos</li></a>
-          <a href="#/partners"><li>Partners</li></a>
-          <a href="#/blog"><li>Blog</li></a>
-          <a href="#/press"><li>Prensa</li></a>
-        </ul>
-        </div>
-        <div class="col-sm-2 col-xs-4">
-          <h4>SERVICIOS</h4>
-          <ul class="list-unstyled">
-            <a href="http://shop.vr3.io"><li>Tienda</li></a>
-            <a href="#/vr"><li>Realidad Virtual</li></a>
-            <a href="#/ar"><li>Realidad Aumentada</li></a>
-            <a href="#/apps"><li>Apps Móviles</li></a>
-            <a href="#/webapps"><li>Web Apps</li></a>
-          </ul>
-        </div>
-        <div class="col-sm-2 col-xs-4">
-          <h4>ACERCA DE VR3</h4>
-          <ul class="list-unstyled">
-            <a href="#/project"><li>Proyecto</li></a>
-            <a href="#/team"><li>Equipo</li></a>
-            <a href="#/jobs"><li>Empleo</li></a>
-            <a href="#/privacy"><li>Privacidad</li></a>
-            <a href="#/tos"><li>Términos y Condiciones</li></a>
-            <a href="#/karma"><li>Karma</li></a>
-          </ul>
+        <div class="col-md-12">
+          <h3 class="section-title-inverted">Contact</h3>
+          <p>Si tienes algúna duda o sugerencia, o deseas contactarnos para mayores informes, porfavor llena la siguiente forma de contacto, o escríbenos a <a href="mailto:info@vr3.io">info@vr3.io</a></p>
+          <form role="form" method="post" action="../../php/contact.php">
+            <div class="form-group">
+              <label>Nombre</label>
+              <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                <input type="text" name="name" class="form-control" placeholder="Nombre">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Correo</label>
+              <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                <input type="email" name="email" class="form-control" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Mensaje</label>
+              <textarea class="form-control" name="message" rows="5"></textarea>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk">
+            </div>
+            <input type="submit" name="submit" id="submit" value="Enviar" class="btn btn-success btn-lg btn-outline pull-right contact-btn">
+          </form>
         </div>
       </div>
     </div>
   </div>
+
+  <acme-footer></acme-footer>
 
   <script>
     $(document).scroll(function() {

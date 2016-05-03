@@ -7,6 +7,9 @@
 
     function CompanyController(){
       //Company Controller (Project, Team, Jobs, Privacy, TOS, Karma)
+
+      var vm = this;
+
     }
 
 })();

@@ -1,7 +1,7 @@
 <nav class="navbar transparent navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-    <a ng-click="main.gotoContact()" class="navbar-toggle collapsed links-collapsed-transparent" data-toggle="collapse" data-target="#vr3Collapse" aria-expanded="false" id="collapsed-links">CONTACTO</a>
+    <a ng-click="#/contact" class="navbar-toggle collapsed links-collapsed-transparent" data-toggle="collapse" data-target="#vr3Collapse" aria-expanded="false" id="collapsed-links">CONTACTO</a>
 
       <a class="brand" href="http://vr3.io">VR3</a>
     </div>
@@ -12,16 +12,20 @@
         <li class="dropdown">
           <a ng-click="main.gotoCompany()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EMPRESA <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Prensa</a></li>
-            <li><a href="#">Soporte</a></li>
-            <li><a href="#">Equipo</a></li>
-            <li><a href="#">Empleo</a></li>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Karma</a></li>
+            <li><a href="#/project">Proyecto</a></li>
+            <li><a href="#/team">Equipo</a></li>
+            <li><a href="#/press">Prensa</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#/support">Soporte</a></li>
+            <li><a href="#/jobs">Empleo</a></li>
+            <li><a href="#/privacy">Privacidad</a></li>
+            <li><a href="#/tos">Términos y Condiciones</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#/karma">Karma</a></li>
 
           </ul>
         </li>
-        <li><a ng-click="main.gotoContact()">CONTACTO</a></li>
+        <li><a ng-click="#/contact">CONTACTO</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

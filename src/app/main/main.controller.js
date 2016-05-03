@@ -39,7 +39,6 @@
       $location.hash('page-contact');
       $anchorScroll();
     }
-
     function gotoEvents(){
       $location.hash('page-events');
       $anchorScroll();

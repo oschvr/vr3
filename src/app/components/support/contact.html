@@ -1,0 +1,63 @@
+<div class="container">
+  <classic-navbar></classic-navbar>
+</div>
+
+<article onload="return ran_color()">
+  <div class="container">
+  <ol class="breadcrumb">
+    <li><a href="#/">Inicio</a></li>
+    <li><a href="#/#page-company">Empresa</a></li>
+    <li class="active">Empleos</li>
+  </ol>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Contacto</h3>
+        <p>Si tienes algúna duda o sugerencia, o deseas contactarnos para mayores informes, porfavor llena la siguiente forma de contacto, o escríbenos a <a href="mailto:info@vr3.io">info@vr3.io</a></p>
+        <form role="form" method="post" action="../../php/contact.php">
+          <div class="form-group">
+            <label>Nombre</label>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-user"></i></div>
+              <input type="text" name="name" class="form-control" placeholder="Nombre">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Correo</label>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+              <input type="email" name="email" class="form-control" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea class="form-control" name="message" rows="5"></textarea>
+          </div>
+          <div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk">
+          </div>
+          <input type="submit" name="submit" id="submit" value="Enviar" class="btn btn-success btn-lg btn-outline pull-right contact-btn">
+        </form>
+      </div>
+    </div>
+  </div>
+</article>
+
+<script>
+  var safeColors = ['00','33','66','99','cc','ff'];
+  var rand = function() {
+      return Math.floor(Math.random()*6);
+  };
+  var randomColor = function() {
+      var r = safeColors[rand()];
+      var g = safeColors[rand()];
+      var b = safeColors[rand()];
+      return "#"+r+g+b;
+  };
+  $(document).ready(function(){
+    function updateBg () {
+      $('#karma').css('background', randomColor());
+    }
+    setInterval(updateBg, 100);
+  });
+</script>
+
+<acme-footer></acme-footer>

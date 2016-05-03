@@ -20,37 +20,44 @@
 
       .state('blog',{
         url: '/blog',
-        templateUrl: 'app/community/blog.html',
+        templateUrl: 'app/components/community/blog.html',
         controller: 'CommunityController',
         controllerAs: 'blog'
       })
 
       .state('partners',{
         url: '/partners',
-        templateUrl: 'app/community/partners.html',
+        templateUrl: 'app/components/community/partners.html',
         controller: 'CommunityController',
         controllerAs: 'partners'
       })
 
       .state('press',{
         url: '/press',
-        templateUrl: 'app/community/press.html',
+        templateUrl: 'app/components/community/press.html',
         controller: 'CommunityController',
         controllerAs: 'press'
       })
 
       //--Soporte
 
-      .state('problem',{
-        url: '/problem',
-        templateUrl: 'app/support/problem.html',
+      .state('support',{
+        url: '/support',
+        templateUrl: 'app/components/support/problem.html',
         controller: 'SupportController',
         controllerAs: 'support'
       })
 
       .state('docs', {
         url: '/docs',
-        templateUrl: 'app/support/docs.html',
+        templateUrl: 'app/components/support/docs.html',
+        controller: 'SupportController',
+        controllerAs: 'support'
+      })
+
+      .state('contact', {
+        url: '/contact',
+        templateUrl: 'app/components/support/contact.html',
         controller: 'SupportController',
         controllerAs: 'support'
       })
@@ -59,14 +66,14 @@
 
       .state('vr', {
         url: '/vr',
-        templateUrl: 'app/services/vr.html',
+        templateUrl: 'app/components/services/vr.html',
         controller: 'ServicesController',
         controllerAs: 'services'
       })
 
       .state('ar', {
         url: '/ar',
-        templateUrl: 'app/services/ar.html',
+        templateUrl: 'app/components/services/ar.html',
         controller: 'ServicesController',
         controllerAs: 'services'
       })
@@ -89,42 +96,42 @@
 
       .state('team', {
         url: '/team',
-        templateUrl: 'app/company/team.html',
+        templateUrl: 'app/components/company/team.html',
         controller: 'CompanyController',
         controllerAs: 'company'
       })
 
       .state('jobs', {
         url: '/jobs',
-        templateUrl: 'app/company/jobs.html',
+        templateUrl: 'app/components/company/jobs.html',
         controller: 'CompanyController',
         controllerAs: 'company'
       })
 
       .state('project', {
         url: '/project',
-        templateUrl: 'app/company/project.html',
+        templateUrl: 'app/components/company/project.html',
         controller: 'CompanyController',
         controllerAs: 'company'
       })
 
       .state('tos', {
         url: '/tos',
-        templateUrl: 'app/company/tos.html',
+        templateUrl: 'app/components/company/tos.html',
         controller: 'CompanyController',
         controllerAs: 'company'
       })
 
       .state('privacy', {
         url: '/privacy',
-        templateUrl: 'app/company/privacy.html',
+        templateUrl: 'app/components/company/privacy.html',
         controller: 'CompanyController',
         controllerAs: 'company'
       })
 
       .state('karma', {
         url: '/karma',
-        templateUrl: 'app/company/karma.html',
+        templateUrl: 'app/components/company/karma.html',
         controller: 'CompanyController',
         controllerAs: 'company'
       });
