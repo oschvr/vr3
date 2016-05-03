@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $timeout, $location, $anchorScroll, $log, webDevTec, toastr, workService, eventsService) {
+  function MainController($scope, $timeout, $location, $sce, $anchorScroll, $log, webDevTec, toastr, workService, eventsService) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -18,6 +18,7 @@
     vm.gotoTop = gotoTop;
     vm.gotoWork = gotoWork;
     vm.gotoContact = gotoContact;
+    vm.gotoEvents = gotoEvents;
 
     activate();
 
@@ -39,10 +40,20 @@
       $anchorScroll();
     }
 
+    function gotoEvents(){
+      $location.hash('page-events');
+      $anchorScroll();
+    }
+
     function activate() {
       getWebDevTec();
       getWork();
       getEvents();
+    }
+
+    //iframe Source Trust as Resource
+    vm.trustSrc = function(src){
+      return $sce.trustAsResourceUrl(src);
     }
 
     //INTO THE TRASH FUCKER

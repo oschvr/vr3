@@ -8,7 +8,7 @@
   /** @ngInject */
   function runBlock($log) {
 
-    $log.debug('runBlock end');
+    $log.debug('VR3.io, VR Livestreaming. Latest version: 0.12; Follow us at @vr3io');
   }
 
 })();

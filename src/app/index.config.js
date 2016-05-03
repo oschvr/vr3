@@ -6,7 +6,7 @@
     .config(config);
 
   /** @ngInject */
-  function config($logProvider, toastrConfig) {
+  function config($logProvider, $sceDelegateProvider, toastrConfig) {
     // Enable log
     $logProvider.debugEnabled(true);
 
@@ -16,6 +16,16 @@
     toastrConfig.positionClass = 'toast-top-right';
     toastrConfig.preventDuplicates = true;
     toastrConfig.progressBar = true;
+
+    //SCEDelegate Policy to allow resources (trusted) to be embeded
+    $sceDelegateProvider.resourceUrlWhitelist([
+      // Allow same origin resource loads.
+      'self',
+      // Allow loading from our assets domain.  Notice the difference between * and **.
+      'http://srv*.assets.example.com/**',
+      'http://www.youtube.com/**',
+      'http://www.youtu.be/**'
+    ]);
   }
 
 })();

@@ -3,20 +3,13 @@
 
 }
 
-a{
-  color: white;
-}
-a:hover{
-  color: #F8EEE5;
-  text-decoration: none;
-}
-
 @font-face {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.googleapis.com/css?family=Montserrat);
 }
+
 
 .navbar.transparent{
   border-width: 0px;
@@ -37,6 +30,33 @@ a:hover{
     margin-left: 40px;
 
     a{
+      color: #DD1623;
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: none;
+      }
+    a:after{
+      text-decoration: none;
+      }
+    }
+}
+
+.navbar.filled-background {
+  border-width: 0px;
+  -webkit-box-shadow: 0px 0px;
+  box-shadow: 0px 0px;
+  background-color: rgba(150,50,50,.75);
+
+  .brand{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 2em;
+    top: 6px;
+    color: #ffffff;
+    position: relative;
+    margin-left: 40px;
+
+    a{
       text-decoration: none;
     }
     a:hover{
@@ -52,17 +72,37 @@ a:hover{
   float: right !important;
   margin-right: 40px;
   a{
-    color: #FFFFFF;
+    color: #DD1623;
   }
   a:hover{
-    color: #990000;
+    color: #5A0000;
     text-decoration: none;
   }
 }
-.links-collapsed{
+.links-background{
+  float: right !important;
+  margin-right: 40px;
+  a{
+    color: #FFFFFF;
+  }
+  a:hover{
+    color: #CCCCCC;
+    text-decoration: none;
+  }
+}
+.links-collapsed-background{
   margin-right: 40px;
   a{
     color: white;
+  }
+  a:hover{
+    color: #666666;
+  }
+}
+.links-collapsed-transparent{
+  margin-right: 40px;
+  a{
+    color: #DD1623;
   }
   a:hover{
     color: #666666;

@@ -32,7 +32,11 @@
     <div class="container">
       <div class="row center-block">
         <div class="col-sm-6">
-        <img src="../../assets/images/vrhmd.png">
+        <!--img src="../../assets/images/vrhmd.png"-->
+        <span class="fa-stack fa-5x">
+          <!--i class="fa fa-circle fa-stack-2x icon-color-red"></i-->
+          <i class="fa fa-eye fa-stack-1x icon-color-red"></i>
+        </span>
           <h3>Lo que hay <strong>dentro</strong> cuenta</h3>
           <p>Sumérgete en mundos increibles, experimenta en primera fila tus conciertos favoritos, sigue a tus jugadores preferidos desde otro punto de vista. Descubre que es la <strong>Realidad Virtual</strong></p>
           <!--p>Todo esto y más desde tu dispositivo móvil, tu visor de VR
@@ -41,7 +45,11 @@
           <button class="btn btn-lg btn-danger btn-outline">Descubre más de VR</button>
         </div>
         <div class="col-sm-6">
-        <img src="../../assets/images/arhmd.png">
+        <!--img src="../../assets/images/arhmd.png"-->
+        <span class="fa-stack fa-5x">
+          <!--i class="fa fa-circle fa-stack-2x icon-color-red"></i-->
+          <i class="fa fa-magic fa-stack-1x icon-color-red"></i>
+        </span>
           <h3><strong>Descubre</strong> increibles mundos</h3>
           <p>Apunta y desbloquea contenidos increibles. Así de fácil puedes disfrutar o interactuar con miles de posibilidades. Imágenes, videos, juegos y mucho más en <strong>Realidad Aumentada</strong></p>
           <br>
@@ -55,14 +63,35 @@
       <div id="page-work">
         <div class="container work-section">
           <div class="row">
-            <h3 class="section-title-inverted">Proyectos y Trabajo</h3>
-            <div class="col-sm-4 col-xs-6" ng-repeat="work in works">
+            <h3 class="section-title-inverted">Proyectos y Trabajos</h3>
+
+            <div class="col-md-4" ng-repeat="work in main.works">
               <div class="panel panel-default">
                 <div class="panel-body">
-                  <h2>{{work.title}}</h2>
-                  <a href="{{work.url}}" ng-hide="!work.url"><h5>{{work.client}}</h5></a>
-                  <h5>{{work.client}}</h5>
 
+                  <div class="media">
+                    <div class="media-left">
+                      <img class="media-object" src="{{work.image}}">
+                    </div>
+                    <div class="media-body">
+                        <h2>{{work.title}}</h2>
+                        <div class="work-text-client">
+                          <a href="{{work.url}}" ng-hide="!work.url"><h5>{{work.client}}</h5></a>
+                          <h5>{{work.client}}</h5>
+                        </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <!-- 16:9 aspect ratio -->
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <ng-youtube-embed url="work.video" width="400px" height="400px" autohide="true" theme="light"></ng-youtube-embed>
+                  </div>
+                  <h4>Descripción: <small>{{work.description}}</small></h4>
+                  <h4>Promo: <small>{{work.promo}}</small></h4>
+                  <form class="form-inline">
+                    <a href="{{work.ios_url}}" ng-hide="!work.ios_url"><button class="btn btn-lg btn-outline btn-primary"><i class="fa fa-apple"></i> iOS</button></a>
+                    <a href="{{work.android_url}}" ng-hide="!work.android_url"><button class="btn btn-lg btn-outline btn-success"><i class="fa fa-android"></i> Android</button></a>
+                  </form>
                 </div>
               </div>
             </div>
@@ -77,7 +106,7 @@
       <div class="container events-section">
         <div class="row-fluid">
           <h3 class="section-title">Agenda de Eventos</h3>
-          <div class="col-sm-3 col-xs-4" ng-repeat="event in main.events">
+          <div class="col-sm-3 col-xs-6" ng-repeat="event in main.events">
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h3 class="panel-title"><strong>{{event.name}}</strong></h3>
@@ -88,8 +117,8 @@
                 <div class="alert alert-info"><p><strong>{{event.startDate}}</strong> - <strong>{{event.endDate}}</strong></p></div>
 
                 <form class="form-inline">
-                  <a href="{{event.url}}"><button class="btn btn-outline btn-success btn-lg">Evento</button></a>
-                  <a href="{{event.tickets_url}}"><button class="btn btn-outline btn-primary btn-lg">Tickets</button></a>
+                  <a href="{{event.url}}"><button class="btn btn-outline btn-warning btn-lg"><i class="fa fa-calendar"></i> Evento</button></a>
+                  <a href="{{event.tickets_url}}"><button class="btn btn-outline btn-success btn-lg"><i class="fa fa-ticket"></i> Tickets</button></a>
                 </form>
 
               </div>
@@ -133,59 +162,74 @@
   <div class="footer-section">
     <div class="container">
       <div class="row center-block">
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-xs-4">
           <h2 class="logo-vr3">VR3</h2>
           <ul class="list-unstyled">
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Github</li>
-            <li>Snapchat</li>
+            <a href="http://facebook.com/vectorthree"><li><i class="fa fa-facebook"></i> Facebook</li></a>
+            <a href="http://twitter.com/vr3io"><li><i class="fa fa-twitter"></i> Twitter</li></a>
+            <a href="http://github.com/ostocino"><li><i class="fa fa-github"></i> Github</li></a>
+            <a href="snapchat://add/ostocino"><li><i class="fa fa-snapchat"></i> Snapchat</li></a>
           </ul>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-xs-4">
           <h4>SOPORTE</h4>
           <ul class="list-unstyled">
-              <li>Reportar Problema</li>
-            <li>Solicitud</li>
-            <li>Contacto</li>
-            <li>Documentación</li>
+            <a href="#/problem"><li>Reportar Problema</li></a>
+            <a href="#/contact"><li>Contacto</li></a>
+            <a href="#/docs"><li>Documentación</li></a>
           </ul>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-xs-4">
         <h4>COMUNIDAD</h4>
         <ul class="list-unstyled">
-          <li>MXVR</li>
-          <li>CapitalVR</li>
-          <li>Eventos</li>
-          <li>Partners</li>
-          <li>Blog</li>
-          <li>Prensa</li>
+          <a href="http://mxvr.co"><li>MXVR</li></a>
+          <a href="http://capitalvr.mx"><li>CapitalVR</li></a>
+          <a ng-click="main.gotoEvents()"><li>Eventos</li></a>
+          <a href="#/partners"><li>Partners</li></a>
+          <a href="#/blog"><li>Blog</li></a>
+          <a href="#/press"><li>Prensa</li></a>
         </ul>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-xs-4">
           <h4>SERVICIOS</h4>
           <ul class="list-unstyled">
-            <li>Realidad Virtual</li>
-            <li>Realidad Aumentada</li>
-            <li>Tienda</li>
-            <li>Apps Móviles</li>
-            <li>Web Apps</li>
+            <a href="http://shop.vr3.io"><li>Tienda</li></a>
+            <a href="#/vr"><li>Realidad Virtual</li></a>
+            <a href="#/ar"><li>Realidad Aumentada</li></a>
+            <a href="#/apps"><li>Apps Móviles</li></a>
+            <a href="#/webapps"><li>Web Apps</li></a>
           </ul>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-xs-4">
           <h4>ACERCA DE VR3</h4>
           <ul class="list-unstyled">
-            <li>Proyecto</li>
-            <li>Equipo</li>
-            <li>Empleo</li>
-            <li>Privacidad</li>
-            <li>Términos y Condiciones</li>
-            <li>Karma</li>
+            <a href="#/project"><li>Proyecto</li></a>
+            <a href="#/team"><li>Equipo</li></a>
+            <a href="#/jobs"><li>Empleo</li></a>
+            <a href="#/privacy"><li>Privacidad</li></a>
+            <a href="#/tos"><li>Términos y Condiciones</li></a>
+            <a href="#/karma"><li>Karma</li></a>
           </ul>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    $(document).scroll(function() {
+      var dHeight = $(this).height()-$(window).height();
+      if ($(this).scrollTop() >= 700) {
+        $('nav').removeClass('transparent').addClass('filled-background');
+        $('#navLinks').removeClass('links').addClass('links-background');
+        $('#collapsedLinks').removeClass('links-collapsed-transparent').addClass('links-collapsed-background');
+      } else{
+        $('nav').addClass('transparent').removeClass('filled-background');
+        $('#collapsedLinks').removeClass('links-collapsed-background').addClass('links-collapsed-transparent');
+      }
+    });
+
+  </script>
+
 
   <script>
     //ScrollMagic Control Panel

@@ -1,14 +1,13 @@
 <nav class="navbar transparent navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed links-collapsed" data-toggle="collapse" data-target="#vr3Collapse" aria-expanded="false" ng-click="gotoContact()">
-        CONTACTO
-      </button>
+    <a ng-click="main.gotoContact()" class="navbar-toggle collapsed links-collapsed-transparent" data-toggle="collapse" data-target="#vr3Collapse" aria-expanded="false" id="collapsed-links">CONTACTO</a>
+
       <a class="brand" href="http://vr3.io">VR3</a>
     </div>
 
     <div class="collapse navbar-collapse" id="vr3Collapse">
-      <ul class="nav navbar-nav links">
+      <ul class="nav navbar-nav links" id="navLinks">
         <li><a ng-click="main.gotoWork()">TRABAJO</a></li>
         <li class="dropdown">
           <a ng-click="main.gotoCompany()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EMPRESA <span class="caret"></span></a>

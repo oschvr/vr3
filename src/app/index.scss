@@ -83,6 +83,9 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
     color: #999999;
     text-align: justify;
   }
+  .icon-color-red{
+    color: #CD3E3F;
+  }
 }
 
 .work-section{
@@ -90,6 +93,16 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
   padding-top: 20px;
   padding-bottom: 30px;
   text-align: center;
+
+  .work-text-client{
+    color: #1082FF;
+    a {
+      color: #1082FF;
+    }
+  }
+  .work-text-description{
+    text-align: justify;
+  }
 }
 
 .company-section{
