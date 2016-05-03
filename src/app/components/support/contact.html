@@ -32,7 +32,7 @@
             <label>Mensaje</label>
             <textarea class="form-control" name="message" rows="5"></textarea>
           </div>
-          <div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk">
+          <!--div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk"-->
           </div>
           <input type="submit" name="submit" id="submit" value="Enviar" class="btn btn-success btn-lg btn-outline pull-right contact-btn">
         </form>
@@ -40,24 +40,5 @@
     </div>
   </div>
 </article>
-
-<script>
-  var safeColors = ['00','33','66','99','cc','ff'];
-  var rand = function() {
-      return Math.floor(Math.random()*6);
-  };
-  var randomColor = function() {
-      var r = safeColors[rand()];
-      var g = safeColors[rand()];
-      var b = safeColors[rand()];
-      return "#"+r+g+b;
-  };
-  $(document).ready(function(){
-    function updateBg () {
-      $('#karma').css('background', randomColor());
-    }
-    setInterval(updateBg, 100);
-  });
-</script>
 
 <acme-footer></acme-footer>

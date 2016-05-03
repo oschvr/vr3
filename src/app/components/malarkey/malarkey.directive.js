@@ -57,14 +57,11 @@
 
       function activate() {
         return getContributors().then(function() {
-          $log.info('Activated Contributors View');
         });
       }
 
       function getContributors() {
         return githubContributor.getContributors(10).then(function(data) {
-          //vm.contributors = data;
-          $log(data);
           return vm.contributors;
         });
       }

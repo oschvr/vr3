@@ -4,10 +4,19 @@
     </div>
 
     <div id="parallax0" class="landing-section parallaxParent" >
-      <video autoplay loop poster="/assets/images/header.jpg" id="landing-video">
-        <source src="../assets/videos/intro.webm">
-        <source src="../assets/videos/intro.mp4">
-      </video>
+      <video autoplay loop poster="/assets/images/header.jpg" id="landing-video" poster="">
+        <source src="../assets/videos/intro.webm" type="video/webm">
+          <source src="../assets/videos/intro.mp4" type="video/mp4">
+          </video>
+          <div class="landing-overlay">
+            <div class="landing-overlay-content">
+              <h1>Livestreaming en VR</h1>
+              <p>El futuro <acme-malarkey extra-values="['ES INCREIBLE', 'YA LLEGÓ', 'ES REALIDAD VIRTUAL', 'ES HOY', 'LO TIENES EN TUS MANOS']"></acme-malarkey>
+              </p>
+              <!--button class="btn btn-outline btn-lg btn-default" href="#/contact" >Descubre más </i></button-->
+            </div>
+          </div>
+
     <!--div class="container">
         <p>El futuro<acme-malarkey extra-values="['ES INCREIBLE', 'YA LLEGÓ', 'ES REALIDAD VIRTUAL', 'ES HOY', 'LO TIENES EN TUS MANOS']"></acme-malarkey></p>
         <button type="button" class="btn btn-lg btn-danger" ng-click="main.showToastr()">Descubrelo &nbsp;<i class="fa fa-caret-down"></i></button>
@@ -32,11 +41,11 @@
     <div class="container">
       <div class="row center-block">
         <div class="col-sm-6">
-        <!--img src="../../assets/images/vrhmd.png"-->
-        <span class="fa-stack fa-5x">
-          <!--i class="fa fa-circle fa-stack-2x icon-color-red"></i-->
-          <i class="fa fa-eye fa-stack-1x icon-color-red"></i>
-        </span>
+          <!--img src="../../assets/images/vrhmd.png"-->
+          <span class="fa-stack fa-5x">
+            <!--i class="fa fa-circle fa-stack-2x icon-color-red"></i-->
+            <i class="fa fa-eye fa-stack-1x icon-color-red"></i>
+          </span>
           <h3>Lo que hay <strong>dentro</strong> cuenta</h3>
           <p>Sumérgete en mundos increibles, experimenta en primera fila tus conciertos favoritos, sigue a tus jugadores preferidos desde otro punto de vista. Descubre que es la <strong>Realidad Virtual</strong></p>
           <!--p>Todo esto y más desde tu dispositivo móvil, tu visor de VR
@@ -45,11 +54,11 @@
           <button class="btn btn-lg btn-danger btn-outline">Descubre más de VR</button>
         </div>
         <div class="col-sm-6">
-        <!--img src="../../assets/images/arhmd.png"-->
-        <span class="fa-stack fa-5x">
-          <!--i class="fa fa-circle fa-stack-2x icon-color-red"></i-->
-          <i class="fa fa-magic fa-stack-1x icon-color-red"></i>
-        </span>
+          <!--img src="../../assets/images/arhmd.png"-->
+          <span class="fa-stack fa-5x">
+            <!--i class="fa fa-circle fa-stack-2x icon-color-red"></i-->
+            <i class="fa fa-magic fa-stack-1x icon-color-red"></i>
+          </span>
           <h3><strong>Descubre</strong> increibles mundos</h3>
           <p>Apunta y desbloquea contenidos increibles. Así de fácil puedes disfrutar o interactuar con miles de posibilidades. Imágenes, videos, juegos y mucho más en <strong>Realidad Aumentada</strong></p>
           <br>
@@ -59,46 +68,46 @@
     </div>
   </div>
 
-    <div id="bg-work">
-      <div id="page-work">
-        <div class="container work-section">
-          <div class="row">
-            <h3 class="section-title-inverted">Proyectos y Trabajos</h3>
+  <div id="bg-work">
+    <div id="page-work">
+      <div class="container work-section">
+        <div class="row">
+          <h3 class="section-title-inverted">Proyectos y Trabajos</h3>
 
-            <div class="col-md-4" ng-repeat="work in main.works">
-              <div class="panel panel-default">
-                <div class="panel-body">
+          <div class="col-md-4" ng-repeat="work in main.works">
+            <div class="panel panel-default">
+              <div class="panel-body">
 
-                  <div class="media">
-                    <div class="media-left">
-                      <img class="media-object" src="{{work.image}}">
-                    </div>
-                    <div class="media-body">
-                        <h2>{{work.title}}</h2>
-                        <div class="work-text-client">
-                          <a href="{{work.url}}" ng-hide="!work.url"><h5>{{work.client}}</h5></a>
-                          <h5>{{work.client}}</h5>
-                        </div>
+                <div class="media">
+                  <div class="media-left">
+                    <img class="media-object" src="{{work.image}}">
+                  </div>
+                  <div class="media-body">
+                    <h2>{{work.title}}</h2>
+                    <div class="work-text-client">
+                      <a href="{{work.url}}" ng-hide="!work.url"><h5>{{work.client}}</h5></a>
+                      <h5>{{work.client}}</h5>
                     </div>
                   </div>
-                  <hr>
-                  <!-- 16:9 aspect ratio -->
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <ng-youtube-embed url="work.video" width="400px" height="400px" autohide="true" theme="light"></ng-youtube-embed>
-                  </div>
-                  <h4>Descripción: <small>{{work.description}}</small></h4>
-                  <h4>Promo: <small>{{work.promo}}</small></h4>
-                  <form class="form-inline">
-                    <a href="{{work.ios_url}}" ng-hide="!work.ios_url"><button class="btn btn-lg btn-outline btn-primary"><i class="fa fa-apple"></i> iOS</button></a>
-                    <a href="{{work.android_url}}" ng-hide="!work.android_url"><button class="btn btn-lg btn-outline btn-success"><i class="fa fa-android"></i> Android</button></a>
-                  </form>
                 </div>
+                <hr>
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                  <ng-youtube-embed url="work.video" width="400px" height="400px" autohide="true" theme="light"></ng-youtube-embed>
+                </div>
+                <h4>Descripción: <small>{{work.description}}</small></h4>
+                <h4>Promo: <small>{{work.promo}}</small></h4>
+                <form class="form-inline">
+                  <a href="{{work.ios_url}}" ng-hide="!work.ios_url"><button class="btn btn-lg btn-outline btn-primary"><i class="fa fa-apple"></i> iOS</button></a>
+                  <a href="{{work.android_url}}" ng-hide="!work.android_url"><button class="btn btn-lg btn-outline btn-success"><i class="fa fa-android"></i> Android</button></a>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
   <div id="bg-events">
@@ -161,34 +170,35 @@
               <label>Mensaje</label>
               <textarea class="form-control" name="message" rows="5"></textarea>
             </div>
-            <div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk">
-            </div>
+            <!--div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk"-->
             <input type="submit" name="submit" id="submit" value="Enviar" class="btn btn-success btn-lg btn-outline pull-right contact-btn">
-          </form>
-        </div>
+          </div>
+
+        </form>
       </div>
     </div>
   </div>
+</div>
 
-  <acme-footer></acme-footer>
+<acme-footer></acme-footer>
 
-  <script>
-    $(document).scroll(function() {
-      var dHeight = $(this).height()-$(window).height();
-      if ($(this).scrollTop() >= 700) {
-        $('nav').removeClass('transparent').addClass('filled-background');
-        $('#navLinks').removeClass('links').addClass('links-background');
-        $('#collapsedLinks').removeClass('links-collapsed-transparent').addClass('links-collapsed-background');
-      } else{
-        $('nav').addClass('transparent').removeClass('filled-background');
-        $('#collapsedLinks').removeClass('links-collapsed-background').addClass('links-collapsed-transparent');
-      }
-    });
+<script>
+  $(document).scroll(function() {
+    var dHeight = $(this).height()-$(window).height();
+    if ($(this).scrollTop() >= 700) {
+      $('nav').removeClass('transparent').addClass('filled-background');
+      $('#navLinks').removeClass('links').addClass('links-background');
+      $('#collapsedLinks').removeClass('links-collapsed-transparent').addClass('links-collapsed-background');
+    } else{
+      $('nav').addClass('transparent').removeClass('filled-background');
+      $('#collapsedLinks').removeClass('links-collapsed-background').addClass('links-collapsed-transparent');
+    }
+  });
 
-  </script>
+</script>
 
 
-  <script>
+<script>
     //ScrollMagic Control Panel
     // init controller
     var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
