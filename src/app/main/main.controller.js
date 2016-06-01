@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $timeout, $location, $sce, $anchorScroll, $log, webDevTec, toastr, workService, eventsService) {
+  function MainController($scope, $timeout, $location, $http, $sce, $anchorScroll, $log, webDevTec, toastr, workService, eventsService) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -48,6 +48,21 @@
       getWebDevTec();
       getWork();
       getEvents();
+    }
+
+    vm.contactUrl = 'app/php/contact.php';
+
+    vm.formSubmit = function (isValid) {
+       if(isValid){
+        $http.post(vm.contactUrl, {'name': vm.name, 'email': vm.email, 'message': vm.message})
+        .success(function (data, status) {
+           vm.status = status;
+           vm.data = data;
+           vm.result = data;
+        })
+       } else{
+        alert('Form invalid');
+       }
     }
 
     //iframe Source Trust as Resource

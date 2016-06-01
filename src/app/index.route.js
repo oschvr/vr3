@@ -43,7 +43,7 @@
 
       .state('support',{
         url: '/support',
-        templateUrl: 'app/components/support/problem.html',
+        templateUrl: 'app/components/support/support.html',
         controller: 'SupportController',
         controllerAs: 'support'
       })

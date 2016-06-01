@@ -25,6 +25,17 @@
           'promo': 'Vive increíbles experiencias en Realidad Virtual a través de tu smartphone. Disponible para iOS y Android.',
           'ios_url': 'http://apple.co/24783ia',
           'android_url': 'http://bit.ly/24788lG'
+        },
+        {
+          'title': 'Live GFX @ VL 2014',
+          'client': 'Coca-Cola.FM',
+          'url': '',
+          'video': 'https://www.youtube.com/watch?v=b622tiGr97M',
+          'image': '../assets/images/works/vl15.png',
+          'description': 'Livestreaming de Gráficos para el Vive Latino 2014',
+          'promo': 'No te pierdas a partir de ahora, la cobertura exclusiva que Coca-Cola trae para ti.',
+          'ios_url': '',
+          'android_url': ''
         }
       ];
 

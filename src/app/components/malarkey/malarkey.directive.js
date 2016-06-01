@@ -61,7 +61,7 @@
       }
 
       function getContributors() {
-        return githubContributor.getContributors(10).then(function(data) {
+        return githubContributor.getContributors(10).then(function() {
           return vm.contributors;
         });
       }
