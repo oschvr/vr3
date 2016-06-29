@@ -1,0 +1,487 @@
+<div class="container">
+  <classic-navbar></classic-navbar>
+</div>
+
+<article onload="return ran_color()">
+  <div class="container">
+  <ol class="breadcrumb">
+    <li><a href="#/">Inicio</a></li>
+    <li><a href="#/#page-company">Empresa</a></li>
+    <li class="active">Empleos</li>
+  </ol>
+    <div class="row">
+      <div class="col-md-12">
+
+        <img style="text-align: center;" src="http://vectorthree.com/workshop/img/banner.png">
+
+        <br>
+        <h1><a href="http://vectorthree.com/workshop/VR3Workshop.pdf">Bajar PDF</a></h1>
+        <br>
+          <h2>VR3 Technologies ®</h2>
+
+          <p>Todos los derechos reservados.
+          CG Logistica SAPI de CV.</p>
+
+          <ul>
+          <li>W: <a href="http://vr3.io">VR3.io</a></li>
+          <li>Tw: <a href="http://twitter.com/vr3io">@VR3io</a></li>
+          <li>Fb: <a href="http://facebook/vectorthree">VR3</a></li>
+          <li>M: <a href="info@vr3.io">info@vr3.io</a></li>
+          </ul>
+
+
+          <hr />
+
+          <h3>Version 1.2</h3>
+
+          <h1>Taller: ¿Cómo se hace una app de VR?</h1>
+
+          <h2>Un workflow básico usando Unity3D</h2>
+
+          <h4>*ORIENTADO A PRINCIPIANTES / INTERMEDIOS</h4>
+
+          <h3>Impartido por <a href="http://twitter.com/ostocino">@ostocino</a> y <a href="https://twitter.com/bobb_robinson">@bobb_robinson</a> de <a href="http://vr3.io">VR3</a> (<a href="http://twitter.com/vr3io">@VR3io</a>)</h3>
+
+          <hr />
+
+          <h3>REQUISITOS</h3>
+
+          <p>A continuación se enlistan los requisitos básicos para poder impartir el taller.</p>
+
+          <ul>
+          <li><p><a href="http://unity3d.com/get-unity/download/archive">Unity3D 5.3.5</a> con módulos de compilación iOS y Android</p></li>
+          <li><p><a href="https://dl.google.com/dl/android/studio/install/2.1.2.0/android-studio-ide-143.2915827-mac.dmg">Android Studio 2</a> (Para compilar en Android)</p></li>
+          <li><p><a href="http://adcdownload.apple.com/Developer_Tools/Xcode_7.3.1/Xcode_7.3.1.dmg">Xcode +7</a> (Para compilar en iOS)</p></li>
+          <li><p>Mac con OS X Mavericks (en adelante: Yosemite, El Capitan), 4Gb de Ram, i5-i7, 200Gb HDD min</p></li>
+          <li><p>PC con Win 8.1 (en adelante: Win10), 4Gb Ram, i5-i7, 200Gb HDD min</p></li>
+          <li><p>Smartphone (iOS/Android)</p></li>
+          <li><p>Cable USB</p></li>
+          <li><p>App: Unity Remote</p></li>
+          </ul>
+
+
+          <h3>DEMO</h3>
+
+          <p>En este paso vamos a demostrar el resultado del taller: Una app de VR con interacción.</p>
+
+          <p><strong>VIDEO</strong></p>
+
+          <h3>INDICE</h3>
+
+          <ul>
+          <li>Introducción</li>
+          <li>Unity3D</li>
+          <li>Assets y Prefabs</li>
+          <li>SDK de Google VR</li>
+          <li>Prueba 1: Corriendo el Editor</li>
+          <li>Construcción de Escena</li>
+          <li>Interacción</li>
+          <li>Prueba 2: Revisando el setup</li>
+          <li>Ajustes Finales</li>
+          <li>Build y Deploy</li>
+          <li>Prueba Final</li>
+          </ul>
+
+
+          <h3>INTRODUCCIÓN</h3>
+
+          <p>Este taller está orientado a desarrolladores, artistas, y aficionados que tienen interes por inicarse en el mundo de la Realidad Virtual.</p>
+
+          <p>Crearemos una app con alguos ambientes predefinidos y trataremos de interactuar con objetos en un espacio virtual. Usaremos audio espacial para aumentar la inmersión.</p>
+
+          <p>Si tienes alguna duda, porfavor escríbenos a <a href="mailto:info@vr3.io">info@vr3.io</a></p>
+
+          <hr />
+
+          <h2>PARTE 1</h2>
+
+          <h3>1. Unity3D (5.3.3f1)</h3>
+
+          <p>En esa sección explicaremos de manera muy breve algunos componentes que vamos a utilizar durante el taller.</p>
+
+          <p>Para mayor información, aquí está la referencia y documentación oficial de Unity3D</p>
+
+          <ul>
+          <li><p><a href="http://docs.unity3d.com/Manual">Manual de Unity</a></p></li>
+          <li><p><a href="http://docs.unity3d.com/ScriptReference/index.html">Referencia de Scripting de Unity</a></p></li>
+          </ul>
+
+
+          <h4>Intro: ¿Qué es Unity3D?</h4>
+
+          <p><img src="http://forum.unity3d.com/attachments/logo-titled-png.16698/" alt="Unity" /></p>
+
+          <p>Unity3D es un motor de juegos que nos da la posibilidad de generar non-gaming apps por ejemplo para VR y AR para multiples plataformas.</p>
+
+          <p>Es el motor de juegos más popular del mundo.</p>
+
+          <h4>Editor</h4>
+
+          <p><img src="https://docs.unity3d.com/uploads/Main/Editor-Breakdown.png" alt="Editor" /></p>
+
+          <h4>Editor: Menus (Inspector / Hierarchy / Project)</h4>
+
+          <ul>
+          <li><p>Inspector
+          <img src="https://docs.unity3d.com/uploads/Main/InspectorWindowCallout.png" alt="Inspector" /></p></li>
+          <li><p>Hierarchy
+          <img src="https://docs.unity3d.com/uploads/Main/HierarchyWindowCallout.png" alt="Hierarchy" /></p></li>
+          <li><p>Project
+          <img src="https://docs.unity3d.com/uploads/Main/ProjectWindowCallout.png" alt="Project" /></p></li>
+          </ul>
+
+
+          <h4>Editor: Navegación (Toolbar / Scene)</h4>
+
+          <ul>
+          <li><p>Toolbar
+          <img src="https://docs.unity3d.com/uploads/Main/ToolbarCallout.png" alt="Toolbar" /></p></li>
+          <li><p>Scene
+          <img src="https://docs.unity3d.com/uploads/Main/SceneViewCallout.png" alt="Scene" /></p></li>
+          </ul>
+
+
+          <h4> AVANZADO: MonoDevelop (C#)</h4>
+
+          <hr />
+
+          <h3>2. Assets y Prefabs</h3>
+
+          <h4>¿Qué es un asset?</h4>
+
+          <p>Un asset es una representación de cualquier elemento que puede ser usado en tu juego o proyecto. Un asset puede venir de un archivo creado fuera de Unity, como:</p>
+
+          <ul>
+          <li>Un modelo 3D</li>
+          <li>Un archivo de audio</li>
+          <li>Un font o archivo de tipografía</li>
+          <li>una imagen o video</li>
+          </ul>
+
+
+          <h4>¿Que es un prefab?</h4>
+
+          <p>Unity tiene un tipo de asset llamado Prefab, que te permite almacenar un objeto de tipo GameObject con componentes y propiedades.</p>
+
+          <h4>AVANZADO: Daydream</h4>
+
+          <hr />
+
+          <h3>3. Google VR SDK</h3>
+
+          <h4>¿Qué es un SDK?</h4>
+
+          <p><strong>Software Development Kit</strong></p>
+
+          <p>Una herramienta que simplifica la creación y desarrollo de aplicaciones para ciertos paquetes, frameworks, plataformas de hardware, sistemas de computadoras, consolas de videojuegos, sistemas operativos, o plataformas similares de desarrollo</p>
+
+          <h4>Google VR</h4>
+
+          <p>Google nos provee de dos plataformas para Realidad Virtual:</p>
+
+          <h2>- Cardboard: La plataforma más popular del mundo para experimentar VR de manera simple y divertida. Funciona para practicamente cualqueir iOS y Android</h2>
+
+          <p><img src="https://lh3.googleusercontent.com/72huKs8BKxmt6dy4PWrKiuWAEmsfAPOeAoEDVtVUaSBHr1eg6Xc9wAtukH9BTDFE2ceHfWzD5mo915iDbC86X1JOKrvG7A=s688" alt="Cardboard" /></p>
+
+          <ul>
+          <li>Daydream:</li>
+          </ul>
+
+
+          <p><img src="https://lh3.googleusercontent.com/Wk2fg-bOLQR4gROWP91gfXLKoAlFLsvSzgMoMOtgrNY_5zWIl-H1yxIJM6BcBO_kB7drbaPYhCivio5UmqGWFM4OEc0QuA=s688" alt="Daydream" /></p>
+
+          <h4>Unity VS iOS VS Android</h4>
+
+          <p>Google nos ofrece tres paquetes a través de GitHub.</p>
+
+          <ul>
+          <li><a href="https://github.com/googlevr/gvr-unity-sdk">GVR Unity</a></li>
+          <li><a href="https://github.com/googlevr/gvr-ios-sdk">GVR iOS</a></li>
+          <li><a href="https://github.com/googlevr/gvr-android-sdk">GVR Android</a></li>
+          </ul>
+
+
+          <p>En este tutorial vamos a utilizar el de <strong>Unity</strong>, por que el motor de juegos nos permite compilar nuestra app para ambas plataformas de manera más sencilla e inmediata, a diferencia de manera nativa</p>
+
+          <h4>AVANZADO: Daydream</h4>
+
+          <hr />
+
+          <h2> PARTE 2</h2>
+
+          <h3>4. PASO 1: Prueba 1 (Corriendo el Editor)</h3>
+
+          <ol>
+          <li>Abrimos Unity3D.</li>
+          <li>Seleccionamos VR3 Workshop, como nuestro proyecto.</li>
+          <li>Revisamos el Editor, y selecionamos Layout (Default).</li>
+          <li>Buscamos la escena "Main" y hacemos doble click.</li>
+          <li>Vamos al Toolbar y le damos en Play.</li>
+          </ol>
+
+
+          <p>Si nuestro proyecto está estable y funcional, debemos poder navegar por el menu principal, hacia las escenas de VR y de Video. A continuación revisaremos las escenas y veremos que podemos hacer.</p>
+
+          <h5>Escena: Main</h5>
+
+          <p><img src="http://vectorthree.com/workshop/img/main.png" alt="Main" /></p>
+
+          <h4> AVANZADO: Unity Remote</h4>
+
+          <hr />
+
+          <h3>5. Escenas</h3>
+
+          <p>Revisamos las escenas y los elementos que conforman cada una. En este taller pasaremos por dos de las formas de hacer VR más populares, Ambientes Virtuales y Video en VR.</p>
+
+          <h4>Ambiente Virtual</h4>
+
+          <p>Para este ejemplo, vamos a crear un pequeño pero sencillo juego inspirado en los ejemplos de Google Cardboard. Elementos a considerar:</p>
+
+          <ul>
+          <li>Interacción en VR</li>
+          <li>Sonido Espacial</li>
+          </ul>
+
+
+          <p>Navegamos a:</p>
+
+          <ol>
+          <li>Assets > Alien Scene</li>
+          <li>Damos doble click sobre Aliens.unity</li>
+          <li>Navegamos por la Vista de Escena con WASD y Botón Medio</li>
+          </ol>
+
+
+          <p>Elementos importantes</p>
+
+          <ul>
+          <li>GvrMain: Prefab de GoogleVR que crea la dinámica de VR.</li>
+          <li>MenuCanvas: UI en VR para navegación</li>
+          <li>OverlayCanvas: Información adicional fuera de VR</li>
+          <li>Aliens: Elementos de interacción</li>
+          <li>Skybox/Stars: Ambiente</li>
+          </ul>
+
+
+          <h5>Escena: Aliens</h5>
+
+          <p><img src="http://vectorthree.com/workshop/img/aliens.png" alt="Aliens" /></p>
+
+          <h3>PASO 2: Crear un ambiente virtual y navegarlo.</h3>
+
+          <p>A continuación revisaremos un menu para navegar y nuevo alien con la mísma dinámica.</p>
+
+          <h4>Menu</h4>
+
+          <ol>
+          <li>Vamos a Assets > Prefabs</li>
+          <li>Buscamos el Prefab de Floor/Menu Canvas dentro de CvrMain > Stereo Render</li>
+          <li>Abrimos Menu Canvas > Panel</li>
+          <li>Click en MainMenu (Boton)</li>
+          <li>Arrastrar MenuManager al combo que dice OnClick()</li>
+          <li>Seleccionar MenuManager.gotoScene (Metodo que acciona boton)</li>
+          <li>Escribir 0</li>
+          </ol>
+
+
+          <h4>Alien</h4>
+
+          <ol>
+          <li>En la vista de Hierarchy, duplicar un elemento de Alien, renombrar "Alien Azul"-</li>
+          <li>Ir a Alien Scene > Prefabs.</li>
+          <li>Selecciónar un alien azul y arrastrarlo a nuestro "Alien Azul", para emparentarlo.</li>
+          <li>Posicionar prefab x = 0, y = 0, z = 0.</li>
+          <li>Seleccionar elemento padre "Alien Azul" y modificar Sistema de Particulas a voluntad.</li>
+          <li>Posicionar elemento padre "Alien Azul" en el mundo, a voluntado, (pos, rot, scale).</li>
+          </ol>
+
+
+          <h4>Video</h4>
+
+          <p>Para este ejemplo, vamos a grabar un video con la Ricoh Theta, o buscaremos un video equirectangular, y lo importamos a nuestro proyecto, para entonces mapearlo a una esfera precargada y poder ver Video en 360º. Elementos a considerar</p>
+
+          <ul>
+          <li>Manejo de Media</li>
+          </ul>
+
+
+          <p>Navegamos a:</p>
+
+          <ul>
+          <li>Assets > Video Scene</li>
+          <li>Damos doble click sobre Video.unity</li>
+          <li>Analizamos la escena desde la vista de Escena con WASD y Botón Medio.</li>
+          </ul>
+
+
+          <h5>Escena: Video</h5>
+
+          <p><img src="http://vectorthree.com/workshop/img/video.png" alt="Video" /></p>
+
+          <h3>PASO 3: Grabar un video y aplicarlo a nuestro player.</h3>
+
+          <p>En este momento, vamos a grabar un video, o vamos a usar un nuevo video equirectangular.</p>
+
+          <ol>
+          <li>Grabar o buscar un video equirectangular (360)</li>
+          <li>En proyecto de Unity, ir a Streaming Assets</li>
+          <li>Click derecho e Importar Nuevo Asset</li>
+          <li>Seleccionar video.</li>
+          <li>En Escena de Video, vamos a VRVideoSphere</li>
+          <li>Poner referencia de nombre en Componente de Video "MediaPlayerCtrl"</li>
+          </ol>
+
+
+          <hr />
+
+          <h3>7. PASO 4: Segunda Prueba (Volviendo a correr el proyecto)</h3>
+
+          <ol>
+          <li>Vamos al Toolbar y le damos en Play.</li>
+          <li>Verificamos que no tengamos ningun error en la consola</li>
+          <li>Navegamos por nuestro proyecto modificado.</li>
+          </ol>
+
+
+          <p>Si nuestro proyecto está estable y funcional, debemos poder navegar por el menu principal, hacia las escenas de VR y de Video con las modificaciones que hicimos.</p>
+
+          <h4>Consola (Debug)</h4>
+
+          <p>Revisemos una vez la consola, para ver que errores, o mensajes tenemos.</p>
+
+          <hr />
+
+          <h3>8. PASO 5: Ajustes Finales</h3>
+
+          <h4>Ajustes a la escena</h4>
+
+          <ol>
+          <li>En este momento, podemos agregar un nuevo alien, o un video diferente.</li>
+          <li>Vamos a la escena principal, haciendo doble click en Main.unity</li>
+          <li>Hacemos click en File > Build Settings</li>
+          </ol>
+
+
+          <hr />
+
+          <h3>9. PASO 6: Build y Deploy</h3>
+
+          <p><img src="http://vectorthree.com/workshop/img/build.png" alt="" /></p>
+
+          <h4>Build Settings (iOS/Android)</h4>
+
+          <p>Una nueva ventana indica los Build Settings, o ajustes de compilacion</p>
+
+          <h4>Player Settings (Solo Android)</h4>
+
+          <ol>
+          <li>Click en Player Settings...</li>
+          <li>Abrimos la pestana de Publish Settings</li>
+          <li>Escribir en el Keystore password y en el campo Key la contraseña "vectorthree"</li>
+          </ol>
+
+
+          <h4>Build Settings(iOS/Android)</h4>
+
+          <ol>
+          <li>Seleccionar plataforma para compilar</li>
+          <li>Hacer click en Build</li>
+          <li>Especificar directorio (Escritorio)</li>
+          <li>Crear carpeta "iOS BUILDS" o "ANDROID BUILDS"</li>
+          <li>Versionar v#.x.x, por ejemplo 1.0.5</li>
+          </ol>
+
+
+          <h4>Xcode (iOS)</h4>
+
+          <p><img src="http://vectorthree.com/workshop/img/xcode.png" alt="Xcode" /></p>
+
+          <p>Para los que tenemos iOS, debemos compilar a traves de el IDE de Apple, Xcode.</p>
+
+          <ol>
+          <li>Doble click en Unity-iPhone.xcodeproj</li>
+          <li>Conectamos nuestro iPhone con el cable de USB</li>
+          <li>Cmd + R o en Botton Run</li>
+          <li>Desbloqueamos nuestro iPhone y esperamos.</li>
+          </ol>
+
+
+          <h4>APK (Android)</h4>
+
+          <p>Para los que tenemos Android, debemos aceptar APKs unautorizados, y transferir el APK a nuestro Android. Nuestras opciones:</p>
+
+          <ul>
+          <li>Subirlo a Drive desde nuestra cuenta</li>
+          <li>Subirlo a nuestra cuenta de Dropbox</li>
+          <li>Transferir el archivo por USB</li>
+          <li>OTG + File Manager</li>
+          </ul>
+
+
+          <p>Cuando tengamos el APK, deberemos instalarlo</p>
+
+          <ol>
+          <li>Vamos hacia Ajustes > Seguridad</li>
+          <li>Permitir instalacion de apps no oficiales</li>
+          <li>Vamos a la ubicacion del APK, e instalamos</li>
+          </ol>
+
+
+          <hr />
+
+          <h3>10. PASO 7: Prueba Final (Google Cardboard)</h3>
+
+          <p>Visitemos nuestras escenas, y luego, con ayuda del Google Cardboard, colocamos nuestro telefono en el visor.</p>
+
+          <hr />
+
+          <h3>CONCLUSIONES</h3>
+
+          <p>Despues de aprender el proceso entero, en lo que espero hayan sido dos horas, tendremos nuestra app
+          de VR.</p>
+
+          <p>Ahora tenemos una app que:</p>
+
+          <ul>
+          <li>Despliega e interactua con un ambiente virtual generado por computadora.</li>
+          <li>Reproduce un video de nuestra eleccion en 360/VR</li>
+          <li>Tiene precargada la tecnologia mas popular en el mercado para crear aplicaciones en VR</li>
+          </ul>
+
+
+          <p>Tambien tenemos un cardboard para probar muchas otras aplicaciones mas.</p>
+
+          <h3>RECURSOS</h3>
+
+          <p>Recursos para completar este tutorial:</p>
+
+          <p>Version en <a href="">PDF</a></p>
+
+          <p>(Requieres Unity (5.3.3f1))
+          Proyecto del Taller: <a href="">VR3Workshop</a></p>
+
+          <p>Evento para el que fue creado: <a href="http://tagfestival.com/session/como-se-hace-una-app-de-vr-un-workflow-basico">TagCDMX</a></p>
+
+          <p>--</p>
+
+          <p>Las posibilidades que emergen a partir de las dos manera de crear una app de VR, empiezan a tener usos en aplicaciones para  turismo, mercadotecnia, deporte, entretenimiento, salud, educacion etc.</p>
+
+          <h2>VR3 Technologies ®</h2>
+
+          <p>Todos los derechos reservados.
+          CG Logistica SAPI de CV.</p>
+
+          <ul>
+          <li>W: <a href="http://vr3.io">VR3.io</a></li>
+          <li>Tw: <a href="http://twitter.com/vr3io">@VR3io</a></li>
+          <li>Fb: <a href="http://facebook/vectorthree">VR3</a></li>
+          <li>M: <a href="info@vr3.io">info@vr3.io</a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+<acme-footer></acme-footer>

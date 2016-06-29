@@ -39,6 +39,14 @@
         controllerAs: 'press'
       })
 
+      .state('workshop',{
+        url: '/workshop',
+        templateUrl: 'app/components/community/workshop.html',
+        controller: 'CommunityController',
+        controllerAs: 'press'
+      })
+
+
       //--Soporte
 
       .state('support',{
