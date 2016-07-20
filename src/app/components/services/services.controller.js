@@ -5,9 +5,14 @@
     .module('vr3io')
     .controller('ServicesController', ServicesController);
 
-    function ServicesController(){
+    function ServicesController($log){
       //Services Controller(Shop, VR, AR, Apps, Webapps)
-      var services = this;
-      
+      var vm = this;
+
+      vm.getServices = function(){
+        $log.debug('Shop, VR, AR, Apps, Webapps');
+      };
+
+      vm.getServices();
     }
 })();

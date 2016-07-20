@@ -63,6 +63,10 @@
        }
     }
 
+    //
+    vm.landingVRUrl = '#/mainvr';
+    vm.landingIFrame = $sce.trustAsResourceUrl(vm.landingVRUrl);
+
     //iframe Source Trust as Resource
     vm.trustSrc = function(src){
       return $sce.trustAsResourceUrl(src);

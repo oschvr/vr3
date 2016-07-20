@@ -5,9 +5,15 @@
 		.module('vr3io')
 		.controller('CompanyController', CompanyController);
 
-		function CompanyController($http){
+		function CompanyController($log){
 			//Community Controller (Jobs, Karma, Privacy, Project, Team, TOS)
-			var company = this;
+			var vm = this;
 			
+			vm.getCompanyInfo = function(){
+				$log.debug('info@vr3.io');
+			};
+
+			vm.getCompanyInfo();
+
 		}
 })();
