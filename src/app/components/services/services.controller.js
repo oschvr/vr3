@@ -7,6 +7,7 @@
 
     function ServicesController(){
       //Services Controller(Shop, VR, AR, Apps, Webapps)
-
+      var services = this;
+      
     }
 })();

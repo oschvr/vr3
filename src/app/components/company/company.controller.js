@@ -6,17 +6,8 @@
 		.controller('CompanyController', CompanyController);
 
 		function CompanyController($http){
+			//Community Controller (Jobs, Karma, Privacy, Project, Team, TOS)
 			var company = this;
 			
-			company.sendMessage = sendMessage;
-
-			function sendMessage(){
-				alert('MESSAGE-SENT');
-			}
-
-			company.sendAnotherMessage = function(){
-				alert('ANOTHER MESSAGE');
-			}
-
 		}
 })();

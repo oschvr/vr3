@@ -7,6 +7,7 @@
 
     function CommunityController(){
       //Community Controller (Blog, Partners, MXVR, CapitalVR, Press)
-
+      var community = this;
+      
     }
 })();

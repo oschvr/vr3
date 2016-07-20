@@ -6,14 +6,13 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $timeout, $location, $http, $sce, $anchorScroll, $log, webDevTec, toastr, workService, eventsService) {
+  function MainController($scope, $timeout, $location, $http, $sce, $anchorScroll, $log, toastr, workService, eventsService) {
     var vm = this;
 
     vm.awesomeThings = [];
     vm.works = [];
     vm.events = [];
 
-    vm.showToastr = showToastr;
     vm.gotoCompany = gotoCompany;
     vm.gotoTop = gotoTop;
     vm.gotoWork = gotoWork;
@@ -45,7 +44,6 @@
     }
 
     function activate() {
-      getWebDevTec();
       getWork();
       getEvents();
     }
@@ -68,21 +66,6 @@
     //iframe Source Trust as Resource
     vm.trustSrc = function(src){
       return $sce.trustAsResourceUrl(src);
-    }
-
-    //INTO THE TRASH FUCKER
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
-    }
-
-    //INTO THE OTHER TRASH BIN, FUCKER
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
-
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
-      });
     }
 
     //Get all work done by VR3 from the workService to display in SPA
