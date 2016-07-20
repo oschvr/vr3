@@ -29,6 +29,10 @@ Using NPM (Node Package Manager), install [gulp](http://gulpjs.com/) globally, t
 
 ```npm install --global gulp-cli```
 
+Install bower globally
+
+```npm install -g bower``
+
 Or you can always use brew
 
 ```brew install gulp``
