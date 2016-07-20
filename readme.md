@@ -17,7 +17,7 @@ CG Logistica SAPI de CV.
 
 ### Getting Started
 
-Install npm using Homebrew
+Install npm using Homebrew, or you can always download [Node from here](https://nodejs.org/en/)
 
 ```brew install npm```
 
@@ -25,15 +25,33 @@ Install bower for dependency management
 
 ```brew install bower``
 
-Using NodePackageManager, install [gulp](http://gulpjs.com/), the javascript taskrunner
+Using NPM (Node Package Manager), install [gulp](http://gulpjs.com/) globally, the javascript taskrunner
 
-```npm install gulp```
+```npm install --global gulp-cli```
+
+Or you can always use brew
+
+```brew install gulp``
 
 ### Get the project
 
 Clone the repository
 
 ```git clone http://github.com/ostocino/vr3```
+
+Init NPM in the project
+
+```npm init```
+
+then install gulp locally
+
+```npm install --save-dev gulp``
+
+then install npm and bower
+
+```npm intall```
+
+```bower install```
 
 ### Start the server
 
