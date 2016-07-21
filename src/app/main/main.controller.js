@@ -9,17 +9,62 @@
   function MainController($scope, $timeout, $location, $http, $sce, $anchorScroll, $log, toastr, workService, eventsService) {
     var vm = this;
 
-    vm.awesomeThings = [];
-    vm.works = [];
-    vm.events = [];
+    activate();
+
+    //MainVR Section
+    vm.landingVRUrl = '#/mainvr';
+    vm.landingIFrame = $sce.trustAsResourceUrl(vm.landingVRUrl);
+
+    //Landing Section (Using Angular Slick Carousel)
+
+    vm.sliderNumber = [1,2,3,4,5];
+    vm.sliderConfigLoaded = true;
+    vm.sliderCurrentIndex = 0;
+    vm.sliderConfig = {
+      dots: true,
+      autoplay: true,
+      initialSlide: 0,
+      infinite: true,
+      autoplaySpeed: 8000,
+      method: {},
+      event: {
+        beforeChange: function (event, slick, currentSlide, nextSlide) {
+          console.log('before change', Math.floor((Math.random() * 10) + 100));
+        },
+        afterChange: function (event, slick, currentSlide, nextSlide) {
+          $scope.slickCurrentIndex = currentSlide;
+        },
+        breakpoint: function (event, slick, breakpoint) {
+          console.log('breakpoint');
+        },
+        destroy: function (event, slick) {
+          console.log('destroy');
+        },
+        edge: function (event, slick, direction) {
+          console.log('edge');
+        },
+        reInit: function (event, slick) {
+          console.log('re-init');
+        },
+        init: function (event, slick) {
+          console.log('init');
+        },
+        setPosition: function (event, slick) {
+          console.log('setPosition');
+        },
+        swipe: function (event, slick, direction) {
+          console.log('swipe');
+        }
+      }
+    }
+
+    //Scroll Section
 
     vm.gotoCompany = gotoCompany;
     vm.gotoTop = gotoTop;
     vm.gotoWork = gotoWork;
     vm.gotoContact = gotoContact;
     vm.gotoEvents = gotoEvents;
-
-    activate();
 
     //Scroll To using location and anchorScroll
     function gotoTop(){
@@ -48,7 +93,11 @@
       getEvents();
     }
 
-    vm.contactUrl = 'app/php/contact.php';
+
+
+    //Contact Section
+
+    vm.contactUrl = '../php/contact.php';
 
     vm.formSubmit = function (isValid) {
        if(isValid){
@@ -63,23 +112,22 @@
        }
     }
 
-    //
-    vm.landingVRUrl = '#/mainvr';
-    vm.landingIFrame = $sce.trustAsResourceUrl(vm.landingVRUrl);
-
     //iframe Source Trust as Resource
     vm.trustSrc = function(src){
       return $sce.trustAsResourceUrl(src);
     }
 
     //Get all work done by VR3 from the workService to display in SPA
+    vm.works = [];
     function getWork(){
       vm.works = workService.getWork();
     }
 
     //Get all the events from the eventService to display in SPA
+    vm.events = [];
     function getEvents(){
       vm.events = eventsService.getEvents();
     }
+
   }
 })();

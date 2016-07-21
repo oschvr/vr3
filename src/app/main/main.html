@@ -4,27 +4,14 @@
     <acme-navbar></acme-navbar>
   </div>
 
-  <!--PARALLAX MAIN SECTION-->
-    <!--div id="parallax0" class="landing-section parallaxParent" >
-      <video autoplay loop poster="/assets/images/header.jpg" id="landing-video" poster="">
-        <source src="../assets/videos/intro.webm" type="video/webm">
-        <source src="../assets/videos/intro.mp4" type="video/mp4">
-      </video>
-      <div class="landing-overlay">
-        <div class="landing-overlay-content">
-          <h1>Livestreaming en VR</h1>
-          <p>El Futuro<acme-malarkey extra-values="['es increible', 'está aquí', 'es realidad virtual', 'lo tienes en tus manos']"></acme-malarkey>
-          </p>
-          <a class="btn btn-outline btn-lg btn-default learn-more" href="#/contact">Descubre más</a>
-        </div>
-      </div>
-    </div>
-  </div-->
 
   <!-- Landing Section-->
-  <div>
-    <iframe ng-src="{{main.landingIFrame}}" height="800px" width="100%" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="true"></iframe>
-  </div>
+  <slick class="slider" settings="main.sliderConfig" ng-if="main.sliderConfigLoaded" dots="true">
+    <div ng-repeat="slide in main.sliderNumber track by $index">
+      <div class="slider-background">TEST</div>
+    </div>
+  </slick>
+  <!--iframe ng-src="{{main.landingIFrame}}" height="800px" width="100%" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="true"></iframe-->
   <!-- /Landing Section-->
 
   <!-- Call to Action Section-->
