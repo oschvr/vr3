@@ -1,16 +1,28 @@
 
-<div class="container-fluid">
-  <div>
-    <acme-navbar></acme-navbar>
-  </div>
+<div class="container-full">
+ 
+  <acme-navbar></acme-navbar>
 
 
   <!-- Landing Section-->
-  <slick class="slider" settings="main.sliderConfig" ng-if="main.sliderConfigLoaded" dots="true">
+  <!--Slider Template -->  
+  <script type="text/ng-template" id="sliderTemplate.html">
+      <h3>{{slide.labelES}}</h3>
+      <!--a class="btn btn-lg btn-primary btn-outline" href="{{slide.url}}">Learn more</a-->
+  </script>
+
+  <slick settings="main.sliderConfig" ng-if="main.sliderConfigLoaded; main.sliderSlidesLoaded" dots="true">
     <div ng-repeat="slide in main.sliderNumber track by $index">
-      <div class="slider-background">TEST</div>
+      <div class="slider">
+        <div class="slider-background">
+          <div class="slider-slide" ng-include="'sliderTemplate.html'">
+            <!--Slider Template -->
+          </div>
+        </div>
+      </div>
     </div>
   </slick>
+
   <!--iframe ng-src="{{main.landingIFrame}}" height="800px" width="100%" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="true"></iframe-->
   <!-- /Landing Section-->
 
@@ -19,7 +31,7 @@
     <div class="container">
       <div class="row center-block">
         <div class="col-sm-6">
-          <img src="../../assets/images/cardboard.png">
+          <!--img src="../../assets/images/cardboard.png"-->
           <!--span class="fa-stack fa-5x">
             <i class="fa fa-circle fa-stack-2x icon-color-red"></i>
             <i class="fa fa-eye fa-stack-1x icon-color-red"></i-->
@@ -32,7 +44,7 @@
           <a class="btn btn-lg btn-danger btn-outline" href="#/vr">Descubre más de VR</a>
         </div>
         <div class="col-sm-6">
-          <img src="../../assets/images/hololens.png">
+          <!--img src="../../assets/images/hololens.png"-->
           <!--span class="fa-stack fa-5x">
             <i class="fa fa-circle fa-stack-2x icon-color-red"></i>
             <i class="fa fa-magic fa-stack-1x icon-color-red"></i-->
@@ -53,7 +65,7 @@
     <div class="company-overlay">
       <div class="container">
         <div class="row">
-          <div class="company-overlay-content">
+          <div class="">
             <div class="col-md-4">
               <img src="../assets/images/vr3_128.png">
             </div>
@@ -166,10 +178,10 @@
   </div>
   <!--/Contact Section-->
 
+  <div>
+    <!--acme-footer></acme-footer-->
+  </div>  
 </div>
-
-
-<acme-footer></acme-footer>
 
 <script>
   //THIS WILL CHANGE THE NAVBAR ON SCROLL >= 700px

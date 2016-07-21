@@ -17,7 +17,38 @@
 
     //Landing Section (Using Angular Slick Carousel)
 
-    vm.sliderNumber = [1,2,3,4,5];
+    vm.sliderNumber = [
+    {
+      id: 0,
+      labelES: "Transmisiones 360º/VR en Vivo",
+      labelEN: "Live Streaming in VR",
+      url: "http://vr3.io"
+    },
+    {
+      id: 1,
+      labelES: "Encoding de Video Bajo Demanda",
+      labelEN: "Video On Demand Encoding",
+      url: "http://vr3.io"
+    },
+    {
+      id: 2,
+      labelES: "Para iOS/Android, PC/Mac, OTT/TV",
+      labelEN: "For iOS/Android, PC/Mac, OTT/TV",
+      url: "http://vr3.io"
+    },
+    {
+      id: 3,
+      labelES: "Reproductores web 360º/VR",
+      labelEN: "360º/VR Web-based players",
+      url: "http://vr3.io"
+    },
+    {
+      id: 4,
+      labelES: "Experiencias en VR/AR",
+      labelEN: "VR/AR Experiencies",
+      url: "http://vr3.io"
+    }];
+    vm.sliderSlidesLoaded = true;
     vm.sliderConfigLoaded = true;
     vm.sliderCurrentIndex = 0;
     vm.sliderConfig = {
@@ -25,11 +56,11 @@
       autoplay: true,
       initialSlide: 0,
       infinite: true,
-      autoplaySpeed: 8000,
+      autoplaySpeed: 8500,
       method: {},
       event: {
         beforeChange: function (event, slick, currentSlide, nextSlide) {
-          console.log('before change', Math.floor((Math.random() * 10) + 100));
+          //console.log('before change', Math.floor((Math.random() * 10) + 100));
         },
         afterChange: function (event, slick, currentSlide, nextSlide) {
           $scope.slickCurrentIndex = currentSlide;
@@ -50,7 +81,7 @@
           console.log('init');
         },
         setPosition: function (event, slick) {
-          console.log('setPosition');
+          //console.log('setPosition');
         },
         swipe: function (event, slick, direction) {
           console.log('swipe');
