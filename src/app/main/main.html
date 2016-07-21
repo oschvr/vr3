@@ -4,7 +4,7 @@
       <acme-navbar></acme-navbar>
     </div>
 
-    <div id="parallax0" class="landing-section parallaxParent" >
+    <!--div id="parallax0" class="landing-section parallaxParent" >
       <video autoplay loop poster="/assets/images/header.jpg" id="landing-video" poster="">
         <source src="../assets/videos/intro.webm" type="video/webm">
         <source src="../assets/videos/intro.mp4" type="video/mp4">
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div-->
 
   <div class="calltoaction-section">
     <div class="container">
@@ -51,7 +51,7 @@
     </div>
   </div>
 
-  <div id="parallax1" class="company-section parallaxParent1">
+  <div class="company-section">
     <!--video autoplay loop poster="/assets/images/header.jpg" id="company-video" poster="">
       <source src="../assets/videos/company.webm" type="video/webm">
       <source src="../assets/videos/company.mp4" type="video/mp4">
@@ -195,20 +195,3 @@
   });
 
 </script>
-
-
-<script>
-    //ScrollMagic Control Panel
-    // init controller
-    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
-
-    // build scenes
-    new ScrollMagic.Scene({triggerElement: "#parallax0"})
-    .setTween("#parallax0 > div", {y: "100%", ease: Linear.easeNone})
-    .addTo(controller);
-
-    new ScrollMagic.Scene({triggerElement: "#parallax1"})
-    .setTween("#parallax1 > div", {y: "100%", ease: Linear.easeNone})
-    .addTo(controller);
-
-  </script>

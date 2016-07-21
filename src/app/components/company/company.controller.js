@@ -1,14 +1,12 @@
-(function () {
-  'use strict';
+(function() {
+	'use strict';
 
-  angular
-    .module('vr3io')
-    .controller('CompanyController', CompanyController);
+	angular
+		.module('vr3io')
+		.controller('CompanyController', CompanyController);
 
-    function CompanyController(){
-      //Company Controller (Project, Team, Jobs, Privacy, TOS, Karma)
+		function CompanyController(){
+			var company = this;
 
-    }
-
+		}
 })();
-
