@@ -52,10 +52,11 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-color: #19283f;
+    background-color: #000000;
     //background-image: url(../assets/images/stars.png);
   }
 
+<<<<<<< HEAD
   .slider-slide{
     padding-top: 70px;
     vertical-align: 100px;
@@ -139,6 +140,8 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
     }
   }
 }
+=======
+>>>>>>> 0d319ee40bb934e9bd93b1e59cce0e71392640c1
 
 .landing-overlay{
   width: 100%;
@@ -164,8 +167,6 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 .calltoaction-section{
   min-width: 100%;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
   background-color: white;
   h3{
     color: #666666;

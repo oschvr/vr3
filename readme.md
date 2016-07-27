@@ -55,6 +55,8 @@ then install npm and bower
 
 ```npm intall```
 
+```npm install -g bower```
+
 ```bower install```
 
 ### Start the server
