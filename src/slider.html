@@ -1,0 +1,17 @@
+  <script type="text/ng-template" id="sliderTemplate.html">
+    <div class="slider-background" id="{{slide.id_html}}">
+      <div class="slider-slide" >
+        <img class="slider-img" src="{{slide.img}}">
+        <h3 class="slider-element">{{slide.labelES}}</h3>
+        <!--a class="btn btn-lg btn-primary btn-outline" href="{{slide.url}}">Learn more</a-->
+      </div>
+    </div>
+  </script>
+  
+  <slick settings="main.sliderConfig" ng-if="main.sliderConfigLoaded; main.sliderSlidesLoaded" dots="true">
+    <div ng-repeat="slide in main.sliderNumber track by $index">
+      <div class="slider-container" ng-include="'sliderTemplate.html'">
+        <!--Slider Template -->
+      </div>
+    </div>
+  </slick>

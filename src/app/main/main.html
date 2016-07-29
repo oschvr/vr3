@@ -3,7 +3,6 @@
   <acme-navbar></acme-navbar>
 </div>
 
-<<<<<<< HEAD
 <div class="container-full">
 
   <!-- Landing Section-->
@@ -25,72 +24,44 @@
       </div>
     </div>
   </slick>
-=======
-    <!--div id="parallax0" class="landing-section parallaxParent" >
-      <video autoplay loop poster="/assets/images/header.jpg" id="landing-video" poster="">
-        <source src="../assets/videos/intro.webm" type="video/webm">
-        <source src="../assets/videos/intro.mp4" type="video/mp4">
-      </video>
-      <div class="landing-overlay">
-        <div class="landing-overlay-content">
-          <h1>Livestreaming en VR</h1>
-          <p>El Futuro<acme-malarkey extra-values="['es increible', 'está aquí', 'es realidad virtual', 'lo tienes en tus manos']"></acme-malarkey>
-          </p>
-          <a class="btn btn-outline btn-lg btn-default learn-more" href="#/contact">Descubre más</a>
-        </div>
-      </div>
-    </div>
-  </div-->
->>>>>>> 0d319ee40bb934e9bd93b1e59cce0e71392640c1
-
   <!--iframe ng-src="{{main.landingIFrame}}" height="800px" width="100%" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="true"></iframe-->
   <!-- /Landing Section-->
 
+
   <!-- Call to Action Section-->
-  <div class="calltoaction-section">
-    <div class="container">
-      <div class="row center-block">
-        <div class="col-sm-6">
-          <!--img src="../../assets/images/cardboard.png"-->
-          <!--span class="fa-stack fa-5x">
-            <i class="fa fa-circle fa-stack-2x icon-color-red"></i>
-            <i class="fa fa-eye fa-stack-1x icon-color-red"></i-->
-            </span>
-            <h3>Lo que hay <strong>dentro</strong> cuenta</h3>
-            <p>Sumérgete en mundos increibles, experimenta en primera fila tus conciertos favoritos, sigue a tus jugadores preferidos desde otro punto de vista. Descubre que es la <strong>Realidad Virtual</strong></p>
-          <!--p>Todo esto y más desde tu dispositivo móvil, tu visor de VR
-          o desde tu Oculus/HTC Vive</p-->
-          <br>
-          <a class="btn btn-lg btn-danger btn-outline" href="#/vr">Descubre más de VR</a>
-        </div>
-        <div class="col-sm-6">
-          <!--img src="../../assets/images/hololens.png"-->
-          <!--span class="fa-stack fa-5x">
-            <i class="fa fa-circle fa-stack-2x icon-color-red"></i>
-            <i class="fa fa-magic fa-stack-1x icon-color-red"></i-->
-            </span>
-            <h3><strong>Descubre</strong> increibles mundos</h3>
-            <p>Apunta y desbloquea contenidos increibles. Así de fácil puedes disfrutar o interactuar con miles de posibilidades. Imágenes, videos, juegos y mucho más en <strong>Realidad Aumentada</strong></p>
-            <br>
-            <a class="btn btn-lg btn-danger btn-outline" href="#/ar">Aprende más sobre AR</a>
+  <div class="services-section">
+    <div class="row center-block">
+
+    <div ng-repeat="service in main.services">
+      <div class="col-xs-12 col-md-4">
+        <div class="services-card" id="{{service.slide_id}}">
+          <div class="service-elements">
+            <img ng-src="{{service.image}}">
+            <h2>{{service.nameES}}</h2>
           </div>
         </div>
       </div>
     </div>
+
+      <!--SVOD/PPV-->
+      <!--div class="col-xs-6 col-md-4">
+        <h1>Subscripciones y Pago Por Evento</h1>
+      </div>
+      <!--OTT VR-->
+      <!--div class="col-xs-6 col-md-4">
+        <h1>OTT y VR</h1>
+      </div>
+      <!--VR AR Experiences-->
+      <!--div class="col-xs-6 col-md-4">
+        <h1>Experiencias en VR y AR</h1>
+      </div-->
+      
+    </div>
   </div>
   <!--/Call to Action Section-->
 
-<<<<<<< HEAD
   <!--Company Section-->
   <div  class="company-section">
-=======
-  <div class="company-section">
-    <!--video autoplay loop poster="/assets/images/header.jpg" id="company-video" poster="">
-      <source src="../assets/videos/company.webm" type="video/webm">
-      <source src="../assets/videos/company.mp4" type="video/mp4">
-    </video-->
-    <img src="../assets/images/vr3epic.jpg" id="company-image">
->>>>>>> 0d319ee40bb934e9bd93b1e59cce0e71392640c1
     <div class="company-overlay">
       <div class="container">
         <div class="row">

@@ -41,22 +41,19 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 
 //Slider Section
 .slider-container{
-  height: 100vh;
+  padding-top: 90px;
+  height: 60vh;
   width: 100vw;
 
   .slider-background{
-    margin-top: -20px;
     min-height: 100%;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-color: #000000;
-    //background-image: url(../assets/images/stars.png);
   }
 
-<<<<<<< HEAD
   .slider-slide{
     padding-top: 70px;
     vertical-align: 100px;
@@ -72,76 +69,105 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
     }
 
     h1,h2,h3{
-    font-family: 'Montserrat',sans-serif;
-    font-size: 3em;
-    color: #E0E6FF;
-    position: relative;
-    text-align: center;
+      font-family: 'Montserrat',sans-serif;
+      color: white;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%,0);
+      font-size: 2.5em;
     }
   }
 
   #slide0{
-    background-image: url(../assets/images/stars.png);
+    background-color: #fffff;
+    background-image: url(../assets/images/livestreaming.jpg);
   }
   #slide1{
-    background-image: url(../assets/images/intro-poster.jpg);
+    background-color: #ffffff;
+    background-image: url(../assets/images/servers.jpg);
   }
   #slide2{
-    background-image: url(../assets/images/cardboard.png);
+    background-color: #ffffff;
+    background-image: url(../assets/images/cardboard.jpg);
   }
   #slide3{
+    background-color: #ffffff;
     background-image: url(../assets/images/vrhmd.png); 
   }
   #slide4{
+    background-color: #ffffff;
     background-image: url(../assets/images/stars.png);
   }
 }
-
-
 
 
 
 //Slider Section Mobile
 
 @media only screen and (max-device-width: 375px){
-  .slider{
-    height: 97.5vh;
 
-    .slider-background{
-      margin-top: -20px;
-      min-height: 100%;
-      background-position: center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      background-size: cover;
-      -o-background-size: cover;
-      background-color: #19283f;
-      background-image: url(../assets/images/stars.png);
+}
+
+//Services Section
+
+.services-section{
+  width: 100vw;
+  color: white;
+  margin-top: -10px;
+
+  .services-card{
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    height: 275px;
+    width: 100%;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+
+    .services-elements{
+      margin: auto;
+      width: 100%;
+      padding: 10px;
     }
 
-    .slider-slide{
-      position: relative;
-      top: 75vh;
-    }
     h1,h2,h3{
-      padding-right: 5px;
-      padding-left: 5px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2em;
-      color: #E0E6FF;
-      position: relative;
-      text-align: center;
+      color: white;
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%,0);
+      font-size: 2.5em;
     }
-    a{
-      display: none;
-      /*font-size: 2em;
-      position: relative;
-      text-align: center;*/
+    img{
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -10%); 
+      max-height: 45%;
     }
   }
 }
-=======
->>>>>>> 0d319ee40bb934e9bd93b1e59cce0e71392640c1
+
+#service0{
+  background-color: #400080;
+}
+#service1{
+  background-color: #FF00FF;
+}
+#service2{
+  background-color: #6666FF;
+}
+#service3{
+  background-color: #66CCFF;
+}
+#service4{
+  background-color: #008080;
+}
+#service5{
+  background-color: #808000;
+}
+
+//Services Section Mobile
 
 .landing-overlay{
   width: 100%;
