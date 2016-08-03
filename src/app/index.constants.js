@@ -4,7 +4,6 @@
 
   angular
     .module('vr3io')
-    .constant('malarkey', malarkey)
     .constant('moment', moment);
 
 })();

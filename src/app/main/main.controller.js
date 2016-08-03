@@ -27,46 +27,39 @@
     self.sliderNumber = [
     {
       id: 0,
-      labelES: "Transmisiones 360º/VR en Vivo",
-      labelEN: "Live Streaming in 360º/VR",
+      labelES: "Transmite a 1080/2K o 360º/VR en Vivo",
+      labelEN: "Live Stream to 1080/2K or 360º/VR",
       url: "http://vr3.io",
       id_html:"slide0"
     },
     {
       id: 1,
-      labelES: "Encoding de Video Bajo Demanda",
+      labelES: "Distribuye bajo demanda a cualquier destino",
       labelEN: "Video On Demand Encoding",
       url: "http://vr3.io",
       id_html:"slide1"
     },
     {
       id: 2,
-      labelES: "Para iOS/Android, PC/Mac, OTT/TV, GearVR/Cardboard",
-      labelEN: "For iOS/Android, PC/Mac, OTT/TV, GearVR/Cardboard",
+      labelES: "Habilita Subscripciones o crea tu sistema de Pago-Por-Evento",
+      labelEN: "100% Web-based Players, Native distribution",
       url: "http://vr3.io",
       id_html:"slide2"
-    }/*
-    {
-      id: 3,
-      labelES: "Reproductores web 360º/VR",
-      labelEN: "360º/VR Web-based players",
-      url: "http://vr3.io",
-      id_html:"slide3"
     },
     {
-      id: 4,
-      labelES: "Experiencias en VR/AR",
-      labelEN: "VR/AR Experiencies",
+      id: 3,
+      labelES: "Crea experiencias únicas de Realidad Virtual/Aumentada",
+      labelEN: "Unique Virtual Reality experiencies for your customers",
       url: "http://vr3.io",
-      id_html:"slide4"
-    }*/];
+      id_html:"slide3"
+    }];
     
     self.sliderSlidesLoaded = true;
     self.sliderConfigLoaded = true;
     self.sliderCurrentIndex = 0;
     self.sliderConfig = {
       dots: true,
-      autoplay: true,
+      autoplay: true, //Set to TRUE on production
       initialSlide: 0,
       infinite: true,
       autoplaySpeed: 8500,

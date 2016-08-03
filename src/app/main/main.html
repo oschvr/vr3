@@ -1,19 +1,14 @@
-
-<div class="container">
+<div>
+  
   <acme-navbar></acme-navbar>
-</div>
-
-<div class="container-full">
-
+  
   <!-- Landing Section-->
   <!--Slider Template -->  
-  <script type="text/ng-template" id="sliderTemplate.html">
+   <script type="text/ng-template" id="sliderTemplate.html">
     <div class="slider-background" id="{{slide.id_html}}">
-      <div class="slider-slide" >
         <img class="slider-img" src="{{slide.img}}">
-        <h3 class="slider-element">{{slide.labelES}}</h3>
+        <h2 class="slider-text">{{slide.labelES}}</h2>
         <!--a class="btn btn-lg btn-primary btn-outline" href="{{slide.url}}">Learn more</a-->
-      </div>
     </div>
   </script>
   
@@ -28,40 +23,79 @@
   <!-- /Landing Section-->
 
 
-  <!-- Call to Action Section-->
+  <!-- Services Section-->
   <div class="services-section">
-    <div class="row center-block">
-
-    <div ng-repeat="service in main.services">
-      <div class="col-xs-12 col-md-4">
-        <div class="services-card" id="{{service.slide_id}}">
-          <div class="service-elements">
-            <img ng-src="{{service.image}}">
-            <h2>{{service.nameES}}</h2>
+    <div class="row">
+      <div ng-repeat="service in main.services">
+        <div class="col-xs-6 col-sm-4 col-md-4">
+          <div class="services-card" id="{{service.slide_id}}">
+            <div class="service-elements">
+              <img ng-src="{{service.image}}">
+              <h2>{{service.nameES}}</h2>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-
-      <!--SVOD/PPV-->
-      <!--div class="col-xs-6 col-md-4">
-        <h1>Subscripciones y Pago Por Evento</h1>
-      </div>
-      <!--OTT VR-->
-      <!--div class="col-xs-6 col-md-4">
-        <h1>OTT y VR</h1>
-      </div>
-      <!--VR AR Experiences-->
-      <!--div class="col-xs-6 col-md-4">
-        <h1>Experiencias en VR y AR</h1>
-      </div-->
-      
+      </div>     
     </div>
   </div>
-  <!--/Call to Action Section-->
+  <!--/Services Section-->
+
+  <!--Clients Section-->
+
+  <!--/Clients Section-->
+
+
+  <!--/Call To Action Section-->
+  <div class="container calltoaction-section">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Descubre como distribuir tu contenido audiovisual en minutos.</h2>
+        <div class="btn btn-calltoaction"><a>Contáctanos</a></div>
+      </div>
+    </div>
+  </div>
+  <!--/Call To Action Section-->
+
+  <!--Solutions Section-->
+  <div class="solutions-section">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="panel solutions-panel">
+          <div class="panel-body">
+            <h2 class="solutions-title">Eventos en Vivo.</h2>
+            <fa class="solutions-img" name="wifi" size="5" ng-style="{'color': '#3B9CD6'}"></fa>
+            <p class="solutions-text">Transmite tus partidos, conciertos, conferencias, o cualquier evento, en vivo y en directo a través de la web. Monetiza con un Pago-Por-Evento.</p>
+            <a href="">Transmite en Vivo</a>
+          </div>
+        </div>  
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="panel solutions-panel">
+          <div class="panel-body">
+            <h2 class="solutions-title" >Televisión por Internet.</h2>
+            <fa class="solutions-img" name="television" size="5" ng-style="{'color': '#3B9CD6'}"></fa>  
+            <p class="solutions-text">Distribuye tu serie, pelicula, cortometraje, o videos institucionales en demanda. Activa un sistema de subscripciones.</p>
+            <a href="">Crea tu canal</a>
+          </div>
+        </div> 
+      
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="panel solutions-panel">
+          <div class="panel-body">
+            <h2 class="solutions-title">Marketing Viral.</h2>
+            <fa class="solutions-img" name="bullhorn" size="5" ng-style="{'color': '#3B9CD6'}"></fa>
+            <p class="solutions-text">Experimenta con los expertos en las tecnologías más nuevas, como VR y AR y crea un fuerte impacto con tu marca o empresa.</p>
+            <a href="">Crea tu experiencia</a>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+  <!--/Solutions Section-->
 
   <!--Company Section-->
-  <div  class="company-section">
+  <!--div  class="company-section">
     <div class="company-overlay">
       <div class="container">
         <div class="row">
@@ -79,7 +113,7 @@
   </div>
   <!--Company Section-->
 
-  <!--Work Section-->
+  <!--Work Section>
   <div class="container work-section">
     <div class="row">
       <h3 class="section-title-inverted">Proyectos y Trabajos</h3>
@@ -101,7 +135,6 @@
               </div>
             </div>
             <hr>
-            <!-- 16:9 aspect ratio -->
             <div class="embed-responsive embed-responsive-16by9">
               <ng-youtube-embed url="work.video" width="400px" height="400px" autohide="true" theme="light"></ng-youtube-embed>
             </div>
@@ -118,7 +151,7 @@
   </div>
   <!--Work Section-->
 
-  <!--Events Section-->
+  <!--Events Section>
   <div class="container events-section">
     <div class="row-fluid">
       <h3 class="section-title">Agenda de Eventos</h3>
@@ -141,7 +174,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div-->
   <!--Events Section-->
 
   <!--Contact Section-->
@@ -179,7 +212,7 @@
   <!--/Contact Section-->
 
   <div>
-    <!--acme-footer></acme-footer-->
+    <acme-footer></acme-footer>
   </div>  
 </div>
 

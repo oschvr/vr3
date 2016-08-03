@@ -1,13 +1,15 @@
-<nav class="navbar transparent navbar-fixed-top">
+<nav class="navbar transparent navbar-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#/contact" class="navbar-toggle collapsed links-collapsed-transparent" data-toggle="collapse" data-target="#vr3Collapse" aria-expanded="false" id="collapsed-links">CONTACTO</a>
+      <a href="#/contact" class="navbar-toggle collapsed btn btn-contact" data-toggle="collapse" data-target="#vr3Collapse" aria-expanded="false" id="collapsed-links">CONTACTO</a>
       <a class="brand" href="http://vr3.io">VR3</a>
     </div>
 
     <div class="collapse navbar-collapse" id="vr3Collapse">
       <ul class="nav navbar-nav links" id="navLinks">
-        <li><a ng-click="main.gotoWork()">TRABAJO</a></li>
+      <li><a class="btn btn-trial trial">PRUEBA HOY</a></li>
+        <li><a ng-click="main.gotoWork()">SOLUCIONES</a></li>
+        <li><a href="#/pricing">PRECIOS</a></li>
         <li class="dropdown">
           <a ng-click="main.gotoCompany()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EMPRESA <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -21,10 +23,9 @@
             <li><a href="#/tos">Términos y Condiciones</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#/karma">Karma</a></li>
-
           </ul>
         </li>
-        <li><a href="#/contact">CONTACTO</a></li>
+        <li><a href="">EN</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

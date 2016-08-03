@@ -15,5 +15,6 @@
 			'toastr',
 			'ngYoutubeEmbed', 
 			'ngEmoticons',
-			'slickCarousel']);
+			'slickCarousel',
+			'picardy.fontawesome']);
 })();

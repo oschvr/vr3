@@ -25,7 +25,7 @@
           'slide_id': 'service0'
         },
         {
-          'nameES': 'Video Bajo Demanda',
+          'nameES': 'Video En Demanda',
           'nameEN': 'Video On Demand',
           'descES': '',
           'descEN': '',
@@ -43,7 +43,7 @@
           'slide_id': 'service2'
         },
         {
-          'nameES': 'Subscripciones y Pago Por Evento',
+          'nameES': 'Subscripciones y PPE',
           'nameEN': 'Subscriptions and Pay Per View',
           'descES': '',
           'descEN': '',
@@ -52,7 +52,7 @@
           'slide_id': 'service3'
         },
         {
-          'nameES': 'Distribución OTT y VR/360º',
+          'nameES': 'TV: OTT y VR/360º',
           'nameEN': 'OTT and VR/360º Distribution',
           'descES': '',
           'descEN': '',
