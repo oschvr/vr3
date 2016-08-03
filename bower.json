@@ -20,10 +20,13 @@
     "angular": "~1.5.3",
     "angular-youtube-embed": "^1.0.2",
     "ng-youtube-embed": "^0.2.3",
-    "ng-emoticons": "^2.0.1"
+    "ng-emoticons": "^2.0.1",
+    "angular-slick-carousel": "^3.1.5",
+    "angular-fontawesome": "^1.0.0"
   },
   "devDependencies": {
-    "angular-mocks": "~1.5.3"
+    "angular-mocks": "~1.5.3",
+    "angular-fontawesome": "^1.0.0"
   },
   "overrides": {
     "bootstrap-sass": {

@@ -18,51 +18,214 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 // bower:scss
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+
+//Master Font
+html,body,h1,h2,h3,h4,h5,p{
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 400;
 }
 
 //LOGO
 .logo-vr3{
   font-family: 'Montserrat',sans-serif;
+  font-weight: 700;
   font-size: 2em;
   color: #E72D2C;
   position: relative;
   top: -10px;
 }
 
-.container-fluid{
-  padding: 0 !important;
-}
 
-
-.learn-more{
-  z-index: 9999;
-  position: fixed;
-  color: white;
-}
-
-
-.landing-overlay{
+//Slider Section
+.slider-container{
+  height: 85vh;
   width: 100%;
-  height: 200%;
-  z-index: -8888;
-  background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-  opacity: 0.9;
-  display: block;
-  position: relative;
-  padding-top: 10px;
+
+  .slider-background{
+    position: relative;
+    min-height: 100%;
+    background-position: center;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  } 
 }
-.landing-overlay-content{
-  text-align: left;
+
+.slider-text{
+  font-family: 'Montserrat',sans-serif;
+  position: absolute;
+  color: #FFFFFF;
+  left: 3.5%;
+  top: 85%;
+  
+}
+.slider-img{
   position: relative;
-  padding-top: 600px;
-  width: 80%;
-  margin: 0 auto;
-  color: #fff;
+
+}
+
+  #slide0{
+    background-image: url(../assets/images/livestreaming.jpg);
+  }
+  #slide1{
+    background-image: url(../assets/images/distribution.jpg);
+  }
+  #slide2{
+    background-image: url(../assets/images/dashboard.jpg);
+  }
+  #slide3{
+    background-image: url(../assets/images/virtualreality.jpg); 
+  }
+  #slide4{
+    background-color: #ffffff;
+    background-image: url(../assets/images/stars.png);
+  }
+
+
+//Slider Section Mobile
+
+@media only screen and (max-device-width: 375px){
+  .slider-background{
+    min-height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+  .slider-container{
+    height: 50vh;
+    width: 100%;
+
+    .slider-background{
+      position: relative;
+      min-height: 100%;
+      background-position: center;
+    } 
+  }
+
+  .slider-text{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    position: absolute;
+    color: white;
+    left: 4%;
+    top: 70%;    
+  }
+  .slider-img{
+    position: relative;
+  }
+}
+
+//Services Section
+
+.services-section{
+  color: white;
+  margin-top: -10px;
+  margin-bottom: 10px;
+
+  .services-card{
+    position: relative;
+    text-align: center;
+    box-shadow: 5px 5px 5px #F0F0F0;
+    height: 225px;
+    width: 100%;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+
+    .services-elements{
+      margin: auto;
+      width: 100%;
+    }
+
+    h1,h2,h3{
+      font-family: 'Montserrat',sans-serif;
+      color: white;
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%,0);
+      font-size: 2em;
+    }
+    img{
+      position: absolute;
+      top: 13%;
+      left: 50%;
+      transform: translate(-50%, -10%); 
+      max-height: 45%;
+    }
+  }
+}
+
+
+//Services Section Mobile
+@media only screen and (max-width: 768px){
+  .services-section{
+    color: white;
+
+    .services-card{
+      position: relative;
+      text-align: center;
+      box-shadow: 5px 5px 5px #F0F0F0;
+      height: 175px;
+      width: 160px;
+      margin-top: 5px; 
+      margin-bottom: 5px;
+
+      .services-elements{
+        margin: auto;
+        width: 100%;
+      }
+
+      h1,h2,h3{
+        font-family: 'Montserrat',sans-serif;
+        color: white;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%,0);
+        font-size: 1.25em;
+      }
+      img{
+        position: absolute;
+        top: 13%;
+        left: 50%;
+        transform: translate(-50%, -10%); 
+        max-height: 45%;
+      }
+    }
+  }
+}
+
+//Services Background
+//MONOCHROMATIC
+
+#service0{
+  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  background-color: #5189FF;
+}
+#service1{
+  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  background-color: #4AA7E8;
+}
+#service2{
+  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  background-color: #5EE7FF;
+}
+#service3{
+  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  background-color: #4AE8D5;
+}
+#service4{
+  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  background-color: #4AE8D5;
+}
+#service5{
+  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  background-color: #51FF8E;
 }
 
 
@@ -70,23 +233,88 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 .calltoaction-section{
   min-width: 100%;
   text-align: center;
-  background-color: white;
-  h3{
-    color: #666666;
-    padding: 5px;
-  }
-  strong{
-    color: #333333;
-  }
-  p{
-    font-size: 1.2em;
-    color: #999999;
-    text-align: justify;
-  }
-  .icon-color-red{
-    color: #CD3E3F;
+  text-justify: auto;
+  a{
+    color: #FFFFFF;
   }
 }
+
+.btn-calltoaction{
+  margin: 20px;
+  padding: 10px;
+  border: none;
+  box-shadow: 2px 2px 5px #F0F0F0;
+  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  color: #white;
+  font-size: 2em;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+
+  a{
+    color: white;
+  }
+}
+.btn-calltoaction:hover{
+  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  box-shadow: 2px 2px 5px #F0F0F0;
+  color: #F1F1F1;
+  border: none;
+  font-size: 2em;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  a{
+    color: #F1F1F1;
+  }
+}
+
+//Solutions Section
+.solutions-section{
+  margin-top: 10px;
+  
+  .solutions-panel{
+    height: 350px;
+    box-shadow: 2px 2px 5px #F0F0F0;
+    text-align: center;
+    
+    .solutions-title{
+      font-family: 'Montserrat', sans-serif;
+      top: 5%;
+      font-weight: 700;
+      font-size: 1.5em;
+    }
+    .solutions-img{
+      position: absolute;
+      transform: translate(-50%,15%);
+    }
+    .solutions-text{
+      text-align: justify;
+      position: absolute;
+      top: 45%;
+      left: 10%;
+      right: 10%;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25em;
+      font-weight: 400;
+    }
+    a{
+      position: absolute;
+      bottom: 10%;
+      transform: translate(-50%,15%);
+      color: #3BB3FF;
+      font-size: 1.25em;
+    }
+    a:hover{
+      color: #1082FF;
+      font-size: 1.25em;
+    }
+  }
+}
+
+//Solutions Section Mobile
 
 .work-section{
   min-width: 100%;
@@ -117,22 +345,6 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
     font-size: 2em;
     vertical-align: center;
   }
-  img#company-image{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -8888;
-    width: auto;
-    height: auto;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(../assets/images/header.jpg) no-repeat;
-    background-size: cover;
-  }
 }
 
 .company-overlay{
@@ -149,7 +361,8 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 .company-overlay-content{
   text-align: center;
   position: relative;
-  padding-top: 250px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   width: 80%;
   margin: 0 auto;
   color: #fff;
@@ -169,21 +382,6 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
   }
 }
 
-.mailing-section{
-  min-width: 100%;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  text-align: center;
-  background-color: #E4E4E4;
-  font-size: 1.75em;
-  h3{
-    padding-bottom: 10px;
-  }
-  .mailing-input{
-    width: 400px;
-  }
-}
-
 .footer-section{
   padding-top: 40px;
   padding-bottom: 30px;
@@ -191,63 +389,7 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 }
 
 
-.section-title{
-  color: white;
-  padding-bottom: 10px;
-}
-
-.section-title-inverted{
-  color: #333333;
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-#bg0{
-  background-image: url(../assets/images/header.jpg);
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-#bg-work{
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-color: #F7F7F7;
-
-}
-#bg-events{
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-color: #19283f;
-  background-image: url(../assets/images/stars.png);
-}
-#bg-company{
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-color: #19283f;
-  background-image: url(../assets/images/header.jpg);
-}
-#bg-contact{
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-color: #FFFFFF;
-}
-
 //Bootstrap Buttons Enhancement: Outline
-
 .btn-outline {
     background-color: transparent;
     color: inherit;

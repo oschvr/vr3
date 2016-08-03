@@ -1,66 +1,105 @@
-
-  <div class="container-fluid">
-    <div>
-      <acme-navbar></acme-navbar>
+<div>
+  
+  <acme-navbar></acme-navbar>
+  
+  <!-- Landing Section-->
+  <!--Slider Template -->  
+   <script type="text/ng-template" id="sliderTemplate.html">
+    <div class="slider-background" id="{{slide.id_html}}">
+        <img class="slider-img" src="{{slide.img}}">
+        <h2 class="slider-text">{{slide.labelES}}</h2>
+        <!--a class="btn btn-lg btn-primary btn-outline" href="{{slide.url}}">Learn more</a-->
     </div>
-
-    <!--div id="parallax0" class="landing-section parallaxParent" >
-      <video autoplay loop poster="/assets/images/header.jpg" id="landing-video" poster="">
-        <source src="../assets/videos/intro.webm" type="video/webm">
-        <source src="../assets/videos/intro.mp4" type="video/mp4">
-      </video>
-      <div class="landing-overlay">
-        <div class="landing-overlay-content">
-          <h1>Livestreaming en VR</h1>
-          <p>El Futuro<acme-malarkey extra-values="['es increible', 'está aquí', 'es realidad virtual', 'lo tienes en tus manos']"></acme-malarkey>
-          </p>
-          <a class="btn btn-outline btn-lg btn-default learn-more" href="#/contact">Descubre más</a>
-        </div>
+  </script>
+  
+  <slick settings="main.sliderConfig" ng-if="main.sliderConfigLoaded; main.sliderSlidesLoaded" dots="true">
+    <div ng-repeat="slide in main.sliderNumber track by $index">
+      <div class="slider-container" ng-include="'sliderTemplate.html'">
+        <!--Slider Template -->
       </div>
     </div>
-  </div-->
+  </slick>
+  <!--iframe ng-src="{{main.landingIFrame}}" height="800px" width="100%" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="true"></iframe-->
+  <!-- /Landing Section-->
 
-  <div class="calltoaction-section">
-    <div class="container">
-      <div class="row center-block">
-        <div class="col-sm-6">
-          <img src="../../assets/images/cardboard.png">
-          <!--span class="fa-stack fa-5x">
-            <i class="fa fa-circle fa-stack-2x icon-color-red"></i>
-            <i class="fa fa-eye fa-stack-1x icon-color-red"></i-->
-          </span>
-          <h3>Lo que hay <strong>dentro</strong> cuenta</h3>
-          <p>Sumérgete en mundos increibles, experimenta en primera fila tus conciertos favoritos, sigue a tus jugadores preferidos desde otro punto de vista. Descubre que es la <strong>Realidad Virtual</strong></p>
-          <!--p>Todo esto y más desde tu dispositivo móvil, tu visor de VR
-          o desde tu Oculus/HTC Vive</p-->
-          <br>
-          <a class="btn btn-lg btn-danger btn-outline" href="#/vr">Descubre más de VR</a>
+
+  <!-- Services Section-->
+  <div class="services-section">
+    <div class="row">
+      <div ng-repeat="service in main.services">
+        <div class="col-xs-6 col-sm-4 col-md-4">
+          <div class="services-card" id="{{service.slide_id}}">
+            <div class="service-elements">
+              <img ng-src="{{service.image}}">
+              <h2>{{service.nameES}}</h2>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-6">
-          <img src="../../assets/images/hololens.png">
-          <!--span class="fa-stack fa-5x">
-            <i class="fa fa-circle fa-stack-2x icon-color-red"></i>
-            <i class="fa fa-magic fa-stack-1x icon-color-red"></i-->
-          </span>
-          <h3><strong>Descubre</strong> increibles mundos</h3>
-          <p>Apunta y desbloquea contenidos increibles. Así de fácil puedes disfrutar o interactuar con miles de posibilidades. Imágenes, videos, juegos y mucho más en <strong>Realidad Aumentada</strong></p>
-          <br>
-          <a class="btn btn-lg btn-danger btn-outline" href="#/ar">Aprende más sobre AR</a>
-        </div>
+      </div>     
+    </div>
+  </div>
+  <!--/Services Section-->
+
+  <!--Clients Section-->
+
+  <!--/Clients Section-->
+
+
+  <!--/Call To Action Section-->
+  <div class="container calltoaction-section">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Descubre como distribuir tu contenido audiovisual en minutos.</h2>
+        <div class="btn btn-calltoaction"><a>Contáctanos</a></div>
       </div>
     </div>
   </div>
+  <!--/Call To Action Section-->
 
-  <div class="company-section">
-    <!--video autoplay loop poster="/assets/images/header.jpg" id="company-video" poster="">
-      <source src="../assets/videos/company.webm" type="video/webm">
-      <source src="../assets/videos/company.mp4" type="video/mp4">
-    </video-->
-    <img src="../assets/images/vr3epic.jpg" id="company-image">
+  <!--Solutions Section-->
+  <div class="solutions-section">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="panel solutions-panel">
+          <div class="panel-body">
+            <h2 class="solutions-title">Eventos en Vivo.</h2>
+            <fa class="solutions-img" name="wifi" size="5" ng-style="{'color': '#3B9CD6'}"></fa>
+            <p class="solutions-text">Transmite tus partidos, conciertos, conferencias, o cualquier evento, en vivo y en directo a través de la web. Monetiza con un Pago-Por-Evento.</p>
+            <a href="">Transmite en Vivo</a>
+          </div>
+        </div>  
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="panel solutions-panel">
+          <div class="panel-body">
+            <h2 class="solutions-title" >Televisión por Internet.</h2>
+            <fa class="solutions-img" name="television" size="5" ng-style="{'color': '#3B9CD6'}"></fa>  
+            <p class="solutions-text">Distribuye tu serie, pelicula, cortometraje, o videos institucionales en demanda. Activa un sistema de subscripciones.</p>
+            <a href="">Crea tu canal</a>
+          </div>
+        </div> 
+      
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="panel solutions-panel">
+          <div class="panel-body">
+            <h2 class="solutions-title">Marketing Viral.</h2>
+            <fa class="solutions-img" name="bullhorn" size="5" ng-style="{'color': '#3B9CD6'}"></fa>
+            <p class="solutions-text">Experimenta con los expertos en las tecnologías más nuevas, como VR y AR y crea un fuerte impacto con tu marca o empresa.</p>
+            <a href="">Crea tu experiencia</a>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+  <!--/Solutions Section-->
+
+  <!--Company Section-->
+  <!--div  class="company-section">
     <div class="company-overlay">
       <div class="container">
         <div class="row">
-          <div class="company-overlay-content">
+          <div class="">
             <div class="col-md-4">
               <img src="../assets/images/vr3_128.png">
             </div>
@@ -72,116 +111,113 @@
       </div>
     </div>
   </div>
+  <!--Company Section-->
 
+  <!--Work Section>
+  <div class="container work-section">
+    <div class="row">
+      <h3 class="section-title-inverted">Proyectos y Trabajos</h3>
 
-  <div id="bg-work">
-    <div id="page-work">
-      <div class="container work-section">
-        <div class="row">
-          <h3 class="section-title-inverted">Proyectos y Trabajos</h3>
+      <div class="col-md-4" ng-repeat="work in main.works">
+        <div class="panel panel-default">
+          <div class="panel-body">
 
-          <div class="col-md-4" ng-repeat="work in main.works">
-            <div class="panel panel-default">
-              <div class="panel-body">
-
-                <div class="media">
-                  <div class="media-left">
-                    <img class="media-object" src="{{work.image}}">
-                  </div>
-                  <div class="media-body">
-                    <h2>{{work.title}}</h2>
-                    <div class="work-text-client">
-                      <a href="{{work.url}}" ng-hide="!work.url"><h5>{{work.client}}</h5></a>
-                      <h5>{{work.client}}</h5>
-                    </div>
-                  </div>
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" src="{{work.image}}">
+              </div>
+              <div class="media-body">
+                <h2>{{work.title}}</h2>
+                <div class="work-text-client">
+                  <a href="{{work.url}}" ng-hide="!work.url"><h5>{{work.client}}</h5></a>
+                  <h5>{{work.client}}</h5>
                 </div>
-                <hr>
-                <!-- 16:9 aspect ratio -->
-                <div class="embed-responsive embed-responsive-16by9">
-                  <ng-youtube-embed url="work.video" width="400px" height="400px" autohide="true" theme="light"></ng-youtube-embed>
-                </div>
-                <h4>Descripción: <small>{{work.description}}</small></h4>
-                <h4>Promo: <small>{{work.promo}}</small></h4>
-                <form class="form-inline">
-                  <a href="{{work.ios_url}}" ng-hide="!work.ios_url"><button class="btn btn-lg btn-outline btn-primary"><i class="fa fa-apple"></i> iOS</button></a>
-                  <a href="{{work.android_url}}" ng-hide="!work.android_url"><button class="btn btn-lg btn-outline btn-success"><i class="fa fa-android"></i> Android</button></a>
-                </form>
               </div>
             </div>
+            <hr>
+            <div class="embed-responsive embed-responsive-16by9">
+              <ng-youtube-embed url="work.video" width="400px" height="400px" autohide="true" theme="light"></ng-youtube-embed>
+            </div>
+            <h4>Descripción: <small>{{work.description}}</small></h4>
+            <h4>Promo: <small>{{work.promo}}</small></h4>
+            <form class="form-inline">
+              <a href="{{work.ios_url}}" ng-hide="!work.ios_url"><button class="btn btn-lg btn-outline btn-primary"><i class="fa fa-apple"></i> iOS</button></a>
+              <a href="{{work.android_url}}" ng-hide="!work.android_url"><button class="btn btn-lg btn-outline btn-success"><i class="fa fa-android"></i> Android</button></a>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!--Work Section-->
 
-  <div id="bg-events">
-    <div id="page-events">
-      <div class="container events-section">
-        <div class="row-fluid">
-          <h3 class="section-title">Agenda de Eventos</h3>
-          <div class="col-sm-3 col-xs-6" ng-repeat="event in main.events">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title"><strong>{{event.name}}</strong></h3>
-              </div>
-              <div class="panel-body">
-                <img src="{{event.image}}" ng-hide="!event.image" href="{{event.url}}">
-                <p>{{event.excerpt}}</p>
-                <div class="alert alert-info"><p><strong>{{event.startDate}}</strong> - <strong>{{event.endDate}}</strong></p></div>
+  <!--Events Section>
+  <div class="container events-section">
+    <div class="row-fluid">
+      <h3 class="section-title">Agenda de Eventos</h3>
+      <div class="col-sm-3 col-xs-6" ng-repeat="event in main.events">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>{{event.name}}</strong></h3>
+          </div>
+          <div class="panel-body">
+            <img src="{{event.image}}" ng-hide="!event.image" href="{{event.url}}">
+            <p>{{event.excerpt}}</p>
+            <div class="alert alert-info"><p><strong>{{event.startDate}}</strong> - <strong>{{event.endDate}}</strong></p></div>
 
-                <form class="form-inline">
-                  <a href="{{event.url}}"><button class="btn btn-outline btn-warning btn-lg"><i class="fa fa-calendar"></i> Evento</button></a>
-                  <a href="{{event.tickets_url}}"><button class="btn btn-outline btn-success btn-lg"><i class="fa fa-ticket"></i> Tickets</button></a>
-                </form>
+            <form class="form-inline">
+              <a href="{{event.url}}"><button class="btn btn-outline btn-warning btn-lg"><i class="fa fa-calendar"></i> Evento</button></a>
+              <a href="{{event.tickets_url}}"><button class="btn btn-outline btn-success btn-lg"><i class="fa fa-ticket"></i> Tickets</button></a>
+            </form>
 
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div-->
+  <!--Events Section-->
 
-  <div id="bg-contact">
-    <div id="page-contact" class="contact-section container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="section-title-inverted">Contacto</h3>
-          <p>Si tienes algúna duda o sugerencia, o deseas contactarnos para mayores informes, porfavor llena la siguiente forma de contacto, o escríbenos a <a href="mailto:info@vr3.io">info@vr3.io</a></p>
-          <form role="form" name="main.userForm">
-            <div class="form-group">
-              <label>Nombre</label>
-              <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                <input type="text" ng-model="main.name" class="form-control" placeholder="Nombre">
-              </div>
+  <!--Contact Section-->
+  <div class="container contact-section">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="section-title-inverted">Contacto</h3>
+        <p>Si tienes algúna duda o sugerencia, o deseas contactarnos para mayores informes, porfavor llena la siguiente forma de contacto, o escríbenos a <a href="mailto:info@vr3.io">info@vr3.io</a></p>
+        <form role="form" name="main.userForm">
+          <div class="form-group">
+            <label>Nombre</label>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-user"></i></div>
+              <input type="text" ng-model="main.name" class="form-control" placeholder="Nombre">
             </div>
-            <div class="form-group">
-              <label>Correo</label>
-              <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                <input type="email" ng-model="main.email" class="form-control" placeholder="Email">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Mensaje</label>
-              <textarea class="form-control" ng-model="main.message" rows="5"></textarea>
-            </div>
-            <!--div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk"-->
-            <input type="submit" name="submit" id="submit" value="Enviar" class="btn btn-success btn-lg btn-outline pull-right contact-btn" ng-click="main.formSubmit(main.userForm.$valid)" ng-disabled="main.userForm.$invalid">
           </div>
+          <div class="form-group">
+            <label>Correo</label>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+              <input type="email" ng-model="main.email" class="form-control" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea class="form-control" ng-model="main.message" rows="5"></textarea>
+          </div>
+          <!--div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk"-->
+          <input type="submit" name="submit" id="submit" value="Enviar" class="btn btn-success btn-lg btn-outline pull-right contact-btn" ng-click="main.formSubmit(main.userForm.$valid)" ng-disabled="main.userForm.$invalid">
+        </div>
 
-        </form>
-      </div>
+      </form>
     </div>
   </div>
+  <!--/Contact Section-->
 
+  <div>
+    <acme-footer></acme-footer>
+  </div>  
 </div>
 
-<acme-footer></acme-footer>
-
 <script>
+  //THIS WILL CHANGE THE NAVBAR ON SCROLL >= 700px
   $(document).scroll(function() {
     var dHeight = $(this).height()-$(window).height();
     if ($(this).scrollTop() >= 700) {

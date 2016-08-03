@@ -14,6 +14,13 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      .state('mainvr', {
+        url: '/',
+        templateUrl: 'app/main/mainVR.html',
+        controller: 'MainController',
+        controllerAs: 'main'
+      })
+
 
       //FOOTER ROUTES (SITE MAP)
       //--Comunidad
