@@ -143,6 +143,7 @@ html,body,h1,h2,h3,h4,h5,p{
 
     h1,h2,h3{
       font-family: 'Montserrat',sans-serif;
+      font-weight: 400;
       color: white;
       position: absolute;
       bottom: 5%;
@@ -171,7 +172,7 @@ html,body,h1,h2,h3,h4,h5,p{
       text-align: center;
       box-shadow: 5px 5px 5px #F0F0F0;
       height: 175px;
-      width: 160px;
+      width: 170px;
       margin-top: 5px; 
       margin-bottom: 5px;
 
@@ -204,27 +205,33 @@ html,body,h1,h2,h3,h4,h5,p{
 //MONOCHROMATIC
 
 #service0{
-  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  opacity: 0.75;
+  background-image: linear-gradient(to bottom right,#3D73B1, #E73F44);
   background-color: #5189FF;
 }
 #service1{
-  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  opacity: 0.75;
+  background-image: linear-gradient(to bottom right,#3D73B1, #E73F44);
   background-color: #4AA7E8;
 }
 #service2{
-  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  opacity: 0.75;
+  background-image: linear-gradient(to bottom right,#3D73B1, #E73F44);
   background-color: #5EE7FF;
 }
 #service3{
-  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  opacity: 0.75;
+  background-image: linear-gradient(to bottom right,#3D73B1, #E73F44);
   background-color: #4AE8D5;
 }
 #service4{
-  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  opacity: 0.75;
+  background-image: linear-gradient(to bottom right,#3D73B1, #E73F44);
   background-color: #4AE8D5;
 }
 #service5{
-  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  opacity: 0.75;
+  background-image: linear-gradient(to bottom right,#3D73B1, #E73F44);
   background-color: #51FF8E;
 }
 
@@ -232,6 +239,8 @@ html,body,h1,h2,h3,h4,h5,p{
 //Call to Action
 .calltoaction-section{
   min-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
   text-justify: auto;
   a{
@@ -244,7 +253,7 @@ html,body,h1,h2,h3,h4,h5,p{
   padding: 10px;
   border: none;
   box-shadow: 2px 2px 5px #F0F0F0;
-  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  background-image: linear-gradient(to bottom right,#3D73B1, #E73F44);
   color: #white;
   font-size: 2em;
   -webkit-transition: all 0.25s ease-in-out;
@@ -257,7 +266,7 @@ html,body,h1,h2,h3,h4,h5,p{
   }
 }
 .btn-calltoaction:hover{
-  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  background-image: linear-gradient(to bottom right,#3D73B1, #E73F44);
   box-shadow: 2px 2px 5px #F0F0F0;
   color: #F1F1F1;
   border: none;
@@ -268,6 +277,23 @@ html,body,h1,h2,h3,h4,h5,p{
   transition: all 0.25s ease-in-out;
   a{
     color: #F1F1F1;
+  }
+}
+
+//Call To Action Section Mobile
+@media only screen and (max-width: 768px){
+  .calltoaction-section{
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-justify: auto;
+    a{
+      color: #FFFFFF;
+    }
+    h2{
+      font-size: 1.5em;
+      font-weight: 700;
+    }
   }
 }
 
@@ -293,7 +319,7 @@ html,body,h1,h2,h3,h4,h5,p{
     .solutions-text{
       text-align: justify;
       position: absolute;
-      top: 45%;
+      top: 40%;
       left: 10%;
       right: 10%;
       font-family: 'Montserrat', sans-serif;
@@ -316,76 +342,62 @@ html,body,h1,h2,h3,h4,h5,p{
 
 //Solutions Section Mobile
 
-.work-section{
-  min-width: 100%;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  text-align: center;
+//CaseStudy News Section
 
-  .work-text-client{
-    color: #1082FF;
-    a {
-      color: #1082FF;
-    }
-  }
-  .work-text-description{
-    text-align: justify;
-  }
-}
+//CaseStudy News Section Mobile
 
-.company-section{
-  position: relative;
-  width: 100%;
-  min-height: auto;
-  color: white;
-  z-index: -8888;
-  text-align: left;
-  p{
-    text-align: justify;
-    font-size: 2em;
-    vertical-align: center;
-  }
-}
+//Contact Section
 
-.company-overlay{
-  width: 100%;
-  height: 200%;
-  z-index: -8888;
-  background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-  opacity: 0.6;
-  display: block;
-  position: relative;
-  padding-top: 10px;
-  text-align: center;
-}
-.company-overlay-content{
-  text-align: center;
-  position: relative;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  width: 80%;
-  margin: 0 auto;
-  color: #fff;
-}
+.contact-section{
 
-.events-section{
-  min-width: 100%;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  text-align: center;
+.btn-contact{
+  margin-top: 20px; 
+  border: none;
+  box-shadow: 2px 2px 5px #F0F0F0;
+  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  color: #white;
   font-size: 2em;
-  p{
-    font-size: .6em;
-  }
-  img{
-    max-width: 100%;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  a{
+    color: white;
   }
 }
+.btn-contact:hover{
+  margin-top: 20px; 
+  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  box-shadow: 2px 2px 5px #F0F0F0;
+  color: #F1F1F1;
+  border: none;
+  font-size: 2em;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  a{
+    color: #F1F1F1;
+  }
+}
+
+//Contact Section Mobile
+
+
+//Footer Section
 
 .footer-section{
-  padding-top: 40px;
+  margin-top: 30px;
+  padding-top: 20px;
   padding-bottom: 30px;
-  background-color: #FFFFFF;
+  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+  color: #284799;
+  a{
+    color: white;
+  }
+  a:hover{
+    color: #D8D8D8;
+  }
 }
 
 

@@ -97,7 +97,63 @@
 
     //Contact Section
 
-    self.contactUrl = '../php/contact.php';
+    self.contactUrl = 'http://www.vectorthree.com/php/contact.php';
+
+    //reCAPTCHA
+    self.recaptchaURL = 'https://www.google.com/recaptcha/api/siteverify'
+
+    self.subjectList = {
+      0: 'Streaming y Transmisiones en Vivo',
+      1: 'Sistema de Subscripciones y PPE',
+      2: 'Experiencias de VR y AR',
+      3: 'Desarrollo de Software',
+      4: 'Otro'
+    };
+
+    self.submit = function(form){
+      //Trigger validation
+      self.submitted = true;
+
+      //In form invalid, return
+      if(form.$invalid){
+        return;
+      } 
+
+      //HTTP Request
+
+      $http.post(self.contactURL, {'name': self.name, 'email': self.email, 'subject': self.subjectList, 'comments': self.comments})
+        .success(function(data, status, headers){
+
+          $log(config);
+
+          if(data.status == 'OK'){
+            self.name = null;
+            self.email = null;
+            self.subjectlist = null;
+            self.comments = null;
+            self.message = "Mensaje enviado. Gracias por contactarnos.";
+          } else {
+
+            $log(config);
+
+            self.message = "Error procesando mensaje, vuelve a intentar.";
+            $log.error(data);
+          }
+        }).error(function(data, status, headers){
+
+          $log(config);
+
+          self.progress = data;
+          self.message = "Hubo un error en la red. Intena más tarde"
+          $log.error(data);
+        }).finally(function(){
+          //Esconder los mensajes despues de 3 seg
+          $timeout(function(){
+            self.message = null;
+          }, 3000);
+        });
+
+    }
 
     self.formSubmit = function (isValid) {
        if(isValid){

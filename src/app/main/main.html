@@ -22,9 +22,23 @@
   <!--iframe ng-src="{{main.landingIFrame}}" height="800px" width="100%" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="true"></iframe-->
   <!-- /Landing Section-->
 
+  <!--/Call To Action Section-->
+  <div class="container calltoaction-section">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Descubre como distribuir tu contenido audiovisual en minutos.</h2>
+        <div class="btn btn-calltoaction"><a>Contáctanos</a></div>
+      </div>
+    </div>
+  </div>
+  <!--/Call To Action Section-->
+
+  <!--Clients Section-->
+
+  <!--/Clients Section-->
 
   <!-- Services Section-->
-  <div class="services-section">
+  <div class="container services-section">
     <div class="row">
       <div ng-repeat="service in main.services">
         <div class="col-xs-6 col-sm-4 col-md-4">
@@ -40,30 +54,14 @@
   </div>
   <!--/Services Section-->
 
-  <!--Clients Section-->
-
-  <!--/Clients Section-->
-
-
-  <!--/Call To Action Section-->
-  <div class="container calltoaction-section">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Descubre como distribuir tu contenido audiovisual en minutos.</h2>
-        <div class="btn btn-calltoaction"><a>Contáctanos</a></div>
-      </div>
-    </div>
-  </div>
-  <!--/Call To Action Section-->
-
   <!--Solutions Section-->
-  <div class="solutions-section">
+  <div class="container solutions-section">
     <div class="row">
       <div class="col-xs-12 col-sm-4 col-md-4">
         <div class="panel solutions-panel">
           <div class="panel-body">
             <h2 class="solutions-title">Eventos en Vivo.</h2>
-            <fa class="solutions-img" name="wifi" size="5" ng-style="{'color': '#3B9CD6'}"></fa>
+            <fa class="solutions-img" name="wifi" size="4" ng-style="{'color': '#3B9CD6'}"></fa>
             <p class="solutions-text">Transmite tus partidos, conciertos, conferencias, o cualquier evento, en vivo y en directo a través de la web. Monetiza con un Pago-Por-Evento.</p>
             <a href="">Transmite en Vivo</a>
           </div>
@@ -73,7 +71,7 @@
         <div class="panel solutions-panel">
           <div class="panel-body">
             <h2 class="solutions-title" >Televisión por Internet.</h2>
-            <fa class="solutions-img" name="television" size="5" ng-style="{'color': '#3B9CD6'}"></fa>  
+            <fa class="solutions-img" name="television" size="4" ng-style="{'color': '#3B9CD6'}"></fa>  
             <p class="solutions-text">Distribuye tu serie, pelicula, cortometraje, o videos institucionales en demanda. Activa un sistema de subscripciones.</p>
             <a href="">Crea tu canal</a>
           </div>
@@ -84,7 +82,7 @@
         <div class="panel solutions-panel">
           <div class="panel-body">
             <h2 class="solutions-title">Marketing Viral.</h2>
-            <fa class="solutions-img" name="bullhorn" size="5" ng-style="{'color': '#3B9CD6'}"></fa>
+            <fa class="solutions-img" name="bullhorn" size="4" ng-style="{'color': '#3B9CD6'}"></fa>
             <p class="solutions-text">Experimenta con los expertos en las tecnologías más nuevas, como VR y AR y crea un fuerte impacto con tu marca o empresa.</p>
             <a href="">Crea tu experiencia</a>
           </div>
@@ -94,122 +92,70 @@
   </div>
   <!--/Solutions Section-->
 
-  <!--Company Section-->
-  <!--div  class="company-section">
-    <div class="company-overlay">
-      <div class="container">
-        <div class="row">
-          <div class="">
-            <div class="col-md-4">
-              <img src="../assets/images/vr3_128.png">
-            </div>
-            <div class="col-md-8">
-              <p>Creamos experiencias interactivas para agencias, publicidad, mercadotecnia, casas productoras y cualquier empresa o compañía.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--Company Section-->
+  <!--CaseStudy News Section-->
 
-  <!--Work Section>
-  <div class="container work-section">
+  <div class="container company-section">
     <div class="row">
-      <h3 class="section-title-inverted">Proyectos y Trabajos</h3>
-
-      <div class="col-md-4" ng-repeat="work in main.works">
-        <div class="panel panel-default">
-          <div class="panel-body">
-
-            <div class="media">
-              <div class="media-left">
-                <img class="media-object" src="{{work.image}}">
-              </div>
-              <div class="media-body">
-                <h2>{{work.title}}</h2>
-                <div class="work-text-client">
-                  <a href="{{work.url}}" ng-hide="!work.url"><h5>{{work.client}}</h5></a>
-                  <h5>{{work.client}}</h5>
-                </div>
-              </div>
-            </div>
-            <hr>
-            <div class="embed-responsive embed-responsive-16by9">
-              <ng-youtube-embed url="work.video" width="400px" height="400px" autohide="true" theme="light"></ng-youtube-embed>
-            </div>
-            <h4>Descripción: <small>{{work.description}}</small></h4>
-            <h4>Promo: <small>{{work.promo}}</small></h4>
-            <form class="form-inline">
-              <a href="{{work.ios_url}}" ng-hide="!work.ios_url"><button class="btn btn-lg btn-outline btn-primary"><i class="fa fa-apple"></i> iOS</button></a>
-              <a href="{{work.android_url}}" ng-hide="!work.android_url"><button class="btn btn-lg btn-outline btn-success"><i class="fa fa-android"></i> Android</button></a>
-            </form>
-          </div>
-        </div>
+      <!--Case Study-->
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <div></div>
+      </div>
+      <!--News-->
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        
       </div>
     </div>
   </div>
-  <!--Work Section-->
 
-  <!--Events Section>
-  <div class="container events-section">
-    <div class="row-fluid">
-      <h3 class="section-title">Agenda de Eventos</h3>
-      <div class="col-sm-3 col-xs-6" ng-repeat="event in main.events">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title"><strong>{{event.name}}</strong></h3>
-          </div>
-          <div class="panel-body">
-            <img src="{{event.image}}" ng-hide="!event.image" href="{{event.url}}">
-            <p>{{event.excerpt}}</p>
-            <div class="alert alert-info"><p><strong>{{event.startDate}}</strong> - <strong>{{event.endDate}}</strong></p></div>
-
-            <form class="form-inline">
-              <a href="{{event.url}}"><button class="btn btn-outline btn-warning btn-lg"><i class="fa fa-calendar"></i> Evento</button></a>
-              <a href="{{event.tickets_url}}"><button class="btn btn-outline btn-success btn-lg"><i class="fa fa-ticket"></i> Tickets</button></a>
-            </form>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div-->
-  <!--Events Section-->
+  <!--/CaseStudy News Section-->
 
   <!--Contact Section-->
   <div class="container contact-section">
-    <div class="row">
-      <div class="col-md-12">
-        <h3 class="section-title-inverted">Contacto</h3>
-        <p>Si tienes algúna duda o sugerencia, o deseas contactarnos para mayores informes, porfavor llena la siguiente forma de contacto, o escríbenos a <a href="mailto:info@vr3.io">info@vr3.io</a></p>
-        <form role="form" name="main.userForm">
-          <div class="form-group">
-            <label>Nombre</label>
-            <div class="input-group">
-              <div class="input-group-addon"><i class="fa fa-user"></i></div>
-              <input type="text" ng-model="main.name" class="form-control" placeholder="Nombre">
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Correo</label>
-            <div class="input-group">
-              <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-              <input type="email" ng-model="main.email" class="form-control" placeholder="Email">
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Mensaje</label>
-            <textarea class="form-control" ng-model="main.message" rows="5"></textarea>
-          </div>
-          <!--div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk"-->
-          <input type="submit" name="submit" id="submit" value="Enviar" class="btn btn-success btn-lg btn-outline pull-right contact-btn" ng-click="main.formSubmit(main.userForm.$valid)" ng-disabled="main.userForm.$invalid">
+    <form name="contactForm" novalidate role="form">
+      <h3 class="section-title-inverted">Contacto</h3>
+      <p>Si tienes algúna duda o sugerencia, o deseas contactarnos para mayores informes, porfavor llena la siguiente forma de contacto, o escríbenos a <a href="mailto:info@vr3.io">info@vr3.io</a></p>
+      <div class="form-group">
+        <label for="name">Nombre *</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-user"></i></div>
+          <input type="text" name="name" data-ng-model="main.name" class="form-control" required placeholder="Nombre"/>
         </div>
+        <span class="label label-danger" data-ng-show="submitted && contactForm.name.$error.required">Required!</span>
+      </div>
 
-      </form>
-    </div>
+      <div class="form-group">
+        <label for="email">Correo Electronico *</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+          <input type="email" name="email" data-ng-model="main.email" class="form-control" required placeholder="Email"/>  
+        </div>
+        <span class="label label-danger" data-ng-show="submitted && contactForm.email.$error.required">Required!</span>
+        <span class="label label-danger" data-ng-show="submitted && contactForm.$error.email">Invalid email!</span>
+      </div>
+
+      <div class="form-group">
+        <label for="subjectList">Motivo de contacto</label>
+        <select name="subjectList" data-ng-model="subjectList" data-ng-options="id as value for (id, value) in main.subjectList" class="form-control" required placeholder="Motivo">
+          <option value=""></option>
+        </select>
+        <span class="label label-danger" data-ng-show="submitted && contactForm.subjectList.$error.required">Required!</span>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Mensaje *</label>
+        <textarea name="comments" data-ng-model="main.comments" class="form-control" rows="5" required placeholder="Mensaje"></textarea>
+        <span class="label label-danger" data-ng-show="submitted && contactForm.comments.$error.required">Required!</span>
+      </div>
+
+      <div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk"></div>
+
+      <div id="messages" class="alert alert-success" data-ng-show="main.messages" data-ng-bind="main.messages"></div>
+      
+      <button data-ng-click="main.submit(contactForm)" class="btn btn-contact pull-right">Enviar</button>
+    </form>
   </div>
   <!--/Contact Section-->
+
 
   <div>
     <acme-footer></acme-footer>
