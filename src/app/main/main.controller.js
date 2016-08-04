@@ -96,8 +96,7 @@
     }
 
     //Contact Section
-
-    self.contactUrl = 'http://www.vectorthree.com/php/contact.php';
+    self.contactUrl = 'http://vectorthree.com/php/contact.php';
 
     //reCAPTCHA
     self.recaptchaURL = 'https://www.google.com/recaptcha/api/siteverify'
@@ -119,12 +118,19 @@
         return;
       } 
 
+      var config = {
+        'name': self.name, 
+        'email': self.email, 
+        'subject': self.subject, 
+        'comments': self.comments
+      };
+
       //HTTP Request
 
-      $http.post(self.contactURL, {'name': self.name, 'email': self.email, 'subject': self.subjectList, 'comments': self.comments})
-        .success(function(data, status, headers){
+      $http.post(self.contactUrl, config)
+        .success(function(data, status){
 
-          $log(config);
+          $log.debug(config);
 
           if(data.status == 'OK'){
             self.name = null;
@@ -141,7 +147,7 @@
           }
         }).error(function(data, status, headers){
 
-          $log(config);
+          $log.debug(config);
 
           self.progress = data;
           self.message = "Hubo un error en la red. Intena más tarde"

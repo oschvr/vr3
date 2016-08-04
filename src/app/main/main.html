@@ -22,17 +22,6 @@
   <!--iframe ng-src="{{main.landingIFrame}}" height="800px" width="100%" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="true"></iframe-->
   <!-- /Landing Section-->
 
-  <!--/Call To Action Section-->
-  <div class="container calltoaction-section">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Descubre como distribuir tu contenido audiovisual en minutos.</h2>
-        <div class="btn btn-calltoaction"><a>Contáctanos</a></div>
-      </div>
-    </div>
-  </div>
-  <!--/Call To Action Section-->
-
   <!--Clients Section-->
 
   <!--/Clients Section-->
@@ -55,7 +44,7 @@
   <!--/Services Section-->
 
   <!--Solutions Section-->
-  <div class="container solutions-section">
+  <div class="container solutions-section" id="solutions">
     <div class="row">
       <div class="col-xs-12 col-sm-4 col-md-4">
         <div class="panel solutions-panel">
@@ -109,11 +98,22 @@
 
   <!--/CaseStudy News Section-->
 
+    <!--/Call To Action Section-->
+  <div class="container calltoaction-section">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Descubre como distribuir tu contenido audiovisual en minutos.</h2>
+        <!--div class="btn btn-calltoaction" ng-click=""><a>Contáctanos</a></div-->
+      </div>
+    </div>
+  </div>
+  <!--/Call To Action Section-->
+
   <!--Contact Section-->
-  <div class="container contact-section">
+  <div class="container contact-section" id="contact">
     <form name="contactForm" novalidate role="form">
-      <h3 class="section-title-inverted">Contacto</h3>
-      <p>Si tienes algúna duda o sugerencia, o deseas contactarnos para mayores informes, porfavor llena la siguiente forma de contacto, o escríbenos a <a href="mailto:info@vr3.io">info@vr3.io</a></p>
+      <!--h3 class="section-title-inverted">Contacto</h3-->
+      <p>Porfavor llena la siguiente forma de contacto, o escríbenos a <a href="mailto:info@vr3.io">info@vr3.io</a></p>
       <div class="form-group">
         <label for="name">Nombre *</label>
         <div class="input-group">
@@ -135,7 +135,7 @@
 
       <div class="form-group">
         <label for="subjectList">Motivo de contacto</label>
-        <select name="subjectList" data-ng-model="subjectList" data-ng-options="id as value for (id, value) in main.subjectList" class="form-control" required placeholder="Motivo">
+        <select name="subjectList" data-ng-model="main.subject" data-ng-options="id as value for (id, value) in main.subjectList" class="form-control" required placeholder="Motivo">
           <option value=""></option>
         </select>
         <span class="label label-danger" data-ng-show="submitted && contactForm.subjectList.$error.required">Required!</span>

@@ -32,7 +32,7 @@
       //Send Email
       $headers = "From: " . $clientEmail . " <" . $clientEmail . ">" . "\r\n" . "Reply-To: " . $clientEmail;
       mail($to, $subject, $message, $headers);
-    }
+    }cx
 
     echo json_encode($array);
 

@@ -2,43 +2,51 @@
   <classic-navbar></classic-navbar>
 </div>
 
-<article onload="return ran_color()">
-  <div class="container">
-  <ol class="breadcrumb">
-    <li><a href="#/">Inicio</a></li>
-    <li><a href="#/#page-company">Empresa</a></li>
-    <li class="active">Empleos</li>
-  </ol>
-    <div class="row">
-      <div class="col-md-12">
-        <h3>Contacto</h3>
-        <p>Si tienes algúna duda o sugerencia, o deseas contactarnos para mayores informes, porfavor llena la siguiente forma de contacto, o escríbenos a <a href="mailto:info@vr3.io">info@vr3.io</a></p>
-        <form role="form" method="post" action="../../php/contact.php">
-          <div class="form-group">
-            <label>Nombre</label>
-            <div class="input-group">
-              <div class="input-group-addon"><i class="fa fa-user"></i></div>
-              <input type="text" name="name" class="form-control" placeholder="Nombre">
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Correo</label>
-            <div class="input-group">
-              <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-              <input type="email" name="email" class="form-control" placeholder="Email">
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Mensaje</label>
-            <textarea class="form-control" name="message" rows="5"></textarea>
-          </div>
-          <!--div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk"-->
-          </div>
-          <input type="submit" name="submit" id="submit" value="Enviar" class="btn btn-success btn-lg btn-outline pull-right contact-btn">
-        </form>
+  <!--Contact Section-->
+  <div class="container contact-section">
+    <form name="contactForm" novalidate role="form">
+      <h3 class="section-title-inverted">Contacto</h3>
+      <p>Si tienes algúna duda o sugerencia, o deseas contactarnos para mayores informes, porfavor llena la siguiente forma de contacto, o escríbenos a <a href="mailto:info@vr3.io">info@vr3.io</a></p>
+      <div class="form-group">
+        <label for="name">Nombre *</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-user"></i></div>
+          <input type="text" name="name" data-ng-model="main.name" class="form-control" required placeholder="Nombre"/>
+        </div>
+        <span class="label label-danger" data-ng-show="submitted && contactForm.name.$error.required">Required!</span>
       </div>
-    </div>
+
+      <div class="form-group">
+        <label for="email">Correo Electronico *</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+          <input type="email" name="email" data-ng-model="main.email" class="form-control" required placeholder="Email"/>  
+        </div>
+        <span class="label label-danger" data-ng-show="submitted && contactForm.email.$error.required">Required!</span>
+        <span class="label label-danger" data-ng-show="submitted && contactForm.$error.email">Invalid email!</span>
+      </div>
+
+      <div class="form-group">
+        <label for="subjectList">Motivo de contacto</label>
+        <select name="subjectList" data-ng-model="main.subject" data-ng-options="id as value for (id, value) in main.subjectList" class="form-control" required placeholder="Motivo">
+          <option value=""></option>
+        </select>
+        <span class="label label-danger" data-ng-show="submitted && contactForm.subjectList.$error.required">Required!</span>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Mensaje *</label>
+        <textarea name="comments" data-ng-model="main.comments" class="form-control" rows="5" required placeholder="Mensaje"></textarea>
+        <span class="label label-danger" data-ng-show="submitted && contactForm.comments.$error.required">Required!</span>
+      </div>
+
+      <div class="g-recaptcha" data-sitekey="6Ld6AR8TAAAAACju2U8T7UsQNRq_GadUYw9HOXnk"></div>
+
+      <div id="messages" class="alert alert-success" data-ng-show="main.messages" data-ng-bind="main.messages"></div>
+      
+      <button data-ng-click="main.submit(contactForm)" class="btn btn-contact pull-right">Enviar</button>
+    </form>
   </div>
-</article>
+  <!--/Contact Section-->
 
 <acme-footer></acme-footer>
