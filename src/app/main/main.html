@@ -1,5 +1,3 @@
-<div>
-  
   <acme-navbar></acme-navbar>
   
   <!-- Landing Section-->
@@ -12,18 +10,29 @@
     </div>
   </script>
   
-  <slick settings="main.sliderConfig" ng-if="main.sliderConfigLoaded; main.sliderSlidesLoaded" dots="true">
+  <slick settings="main.sliderConfig" ng-if="main.sliderConfigLoaded; main.sliderSlidesLoaded">
     <div ng-repeat="slide in main.sliderNumber track by $index">
       <div class="slider-container" ng-include="'sliderTemplate.html'">
         <!--Slider Template -->
       </div>
     </div>
   </slick>
-  <!--iframe ng-src="{{main.landingIFrame}}" height="800px" width="100%" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="true"></iframe-->
   <!-- /Landing Section-->
 
   <!--Clients Section-->
+  <script type="text/ng-template" id="clientsTemplate.html">
+    <div class="clients-background">
+      <img class="clients-img" src="{{clients.img}}">
+    </div>
+  </script>
 
+  <slick settings="main.clientsConfig" ng-if="main.clientsConfigLoaded; main.clientsSlidesLoaded" dots="false">
+    <div ng-repeat="clients in main.clientsNumber track by $index">
+      <div class="clients-container" ng-include="'clientsTemplate.html'">
+        <!--Clients Template-->
+      </div>
+    </div>  
+  </slick>
   <!--/Clients Section-->
 
   <!-- Services Section-->

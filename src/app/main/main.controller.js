@@ -18,12 +18,7 @@
 
     activate();
 
-    //MainVR Section
-    self.landingVRUrl = '#/mainvr';
-    self.landingIFrame = $sce.trustAsResourceUrl(self.landingVRUrl);
-
     //Landing Section (Using Angular Slick Carousel)
-
     self.sliderNumber = [
     {
       id: 0,
@@ -58,45 +53,86 @@
     self.sliderConfigLoaded = true;
     self.sliderCurrentIndex = 0;
     self.sliderConfig = {
-      dots: true,
+      dots: false,
       autoplay: true, //Set to TRUE on production
       initialSlide: 0,
       infinite: true,
       autoplaySpeed: 8500,
-      method: {},
-      event: {
-        beforeChange: function (event, slick, currentSlide, nextSlide) {
-          //console.log('before change', Math.floor((Math.random() * 10) + 100));
+      method: {}
+    };
+
+    //Clients Slider Section (Using Angular Slick Carousel)
+     self.clientsNumber = [
+    {
+      id: 0,
+      img: "../assets/images/clients/3m.png"
+    },
+    {
+      id: 1,
+      img:"../assets/images/clients/coca.png"
+    },
+    {
+      id: 2,
+      img:"../assets/images/clients/indio.png"
+    },
+    {
+      id: 3,
+      img:"../assets/images/clients/modelo.png"
+    },
+    {
+      id: 4,
+      img:"../assets/images/clients/scotch.png"
+    },
+    {
+      id: 5,
+      img:"../assets/images/clients/sony.png"
+    },
+    {
+      id: 6,
+      img:"../assets/images/clients/warner.png"
+    }];
+    
+    self.clientsConfigLoaded = true;
+    self.clientsSlidesLoaded = true;
+    self.clientsCurrentIndex = 0;
+    self.clientsConfig = {
+      dots: false,
+      autoplay: true, //Set to TRUE on production
+      initialSlide: 0,
+      infinite: true,
+      autoplaySpeed: 7000,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: false
+          }
         },
-        afterChange: function (event, slick, currentSlide, nextSlide) {
-          self.slickCurrentIndex = currentSlide;
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
         },
-        breakpoint: function (event, slick, breakpoint) {
-          //console.log('breakpoint');
-        },
-        destroy: function (event, slick) {
-          //console.log('destroy');
-        },
-        edge: function (event, slick, direction) {
-          //console.log('edge');
-        },
-        reInit: function (event, slick) {
-          //console.log('re-init');
-        },
-        init: function (event, slick) {
-          //console.log('init');
-        },
-        setPosition: function (event, slick) {
-          //console.log('setPosition');
-        },
-        swipe: function (event, slick, direction) {
-          //console.log('swipe');
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
         }
-      }
-    }
+      ],
+      method: {}
+    };
 
     //Contact Section
-    self.contactUrl = 'http://vectorthree.com/php/contact.php';
+    self.contactUrl = 'http://vr3.io/php/contact.php';
 
     //reCAPTCHA
     self.recaptchaURL = 'https://www.google.com/recaptcha/api/siteverify'
@@ -179,8 +215,9 @@
       return $sce.trustAsResourceUrl(src);
     }
 
-    //Get all work done by VR3 from the workService to display in SPA
 
+
+    //Get all work done by VR3 from the workService to display in SPA
     function getWork(){
       //self.works = workService.getWork();
     }

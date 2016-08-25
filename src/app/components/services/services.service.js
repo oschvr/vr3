@@ -52,8 +52,8 @@
           'slide_id': 'service3'
         },
         {
-          'nameES': 'TV: OTT y VR/360º',
-          'nameEN': 'OTT and VR/360º Distribution',
+          'nameES': 'OTT y VR/360º',
+          'nameEN': 'OTT and VR/360º',
           'descES': '',
           'descEN': '',
           'url': '#/services/live',

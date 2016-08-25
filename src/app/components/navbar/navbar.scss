@@ -1,17 +1,17 @@
 a{
   font-family: 'Montserrat',sans-serif;
-  color: #5189FF;
+  color: #E72D2C;
   text-decoration: none;
   background: transparent;
   background-color: transparent;
 }
 a:hover{
-  color: #4AA7E8;
+  color: #FF3333;
   text-decoration: none;
   background-color: transparent;
 }
 a:after{
-  color: #51FFB8;
+  color: #B12323;
   text-decoration: none;
 }
 
@@ -32,17 +32,18 @@ a:after{
   }
 }
 
+
 .links{
   float: right !important;
   a{
-    color: #5189FF;
+    color: #E72D2C;
   }
   a:hover{
-    color: #4AA7E8;
+    color: #FF3333;
     text-decoration: none;
   }
   a:after{
-    color: #51FFB8;
+    color: #B12323;
     text-decoration: none;
   }
   .trial{
@@ -83,16 +84,12 @@ a:after{
     font-family: 'Montserrat', sans-serif;
     float: right !important;
     a{
-      color: #5189FF;
+      color: #E72D2C;
     }
     a:hover{
-      color: #4AA7E8;
+      color: #FF3333;
       text-decoration: none;
     }
-  }
-
-  a.btn-contact{
-    background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
   }
 
 }

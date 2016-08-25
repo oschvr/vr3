@@ -38,7 +38,7 @@ html,body,h1,h2,h3,h4,h5,p{
 
 //Slider Section
 .slider-container{
-  height: 85vh;
+  height: 45vh;
   width: 100%;
 
   .slider-background{
@@ -63,25 +63,24 @@ html,body,h1,h2,h3,h4,h5,p{
 }
 .slider-img{
   position: relative;
-
 }
 
-  #slide0{
-    background-image: url(../assets/images/livestreaming.jpg);
-  }
-  #slide1{
-    background-image: url(../assets/images/distribution.jpg);
-  }
-  #slide2{
-    background-image: url(../assets/images/dashboard.jpg);
-  }
-  #slide3{
-    background-image: url(../assets/images/virtualreality.jpg); 
-  }
-  #slide4{
-    background-color: #ffffff;
-    background-image: url(../assets/images/stars.png);
-  }
+#slide0{
+  background-image: url(../assets/images/livestreaming.jpg);
+}
+#slide1{
+  background-image: url(../assets/images/distribution.jpg);
+}
+#slide2{
+  background-image: url(../assets/images/dashboard.jpg);
+}
+#slide3{
+  background-image: url(../assets/images/virtualreality.jpg); 
+}
+#slide4{
+  background-color: #ffffff;
+  background-image: url(../assets/images/stars.png);
+}
 
 
 //Slider Section Mobile
@@ -118,6 +117,55 @@ html,body,h1,h2,h3,h4,h5,p{
   .slider-img{
     position: relative;
   }
+}
+
+
+// Clients Slider Section
+
+.clients-container{
+  width: 100%;
+
+  .clients-background{
+    position: relative;
+    min-height: 100%;
+    background-color: #474848;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+}
+
+.clients-img{
+    position: relative;
+    left: 30%;
+    max-width: 40%;
+  }
+
+// Clients Slider Section Mobile
+@media only screen and (max-device-width: 375px){
+  .clients-container{
+    width: 100%;
+
+    .clients-background{
+      position: relative;
+      min-height: 100%;
+      background-color: #474848;
+      background-position: center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+    }
+  }
+
+  .clients-img{
+      position: relative;
+      left: 25%;
+      top: 25%;
+      max-width: 50%;
+    }
 }
 
 //Services Section
@@ -350,37 +398,37 @@ html,body,h1,h2,h3,h4,h5,p{
 
 .contact-section{
 
-.btn-contact{
-  margin-top: 20px; 
-  border: none;
-  box-shadow: 2px 2px 5px #F0F0F0;
-  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
-  color: #white;
-  font-size: 2em;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  a{
-    color: white;
+  .btn-contact{
+    margin-top: 20px; 
+    border: none;
+    box-shadow: 2px 2px 5px #F0F0F0;
+    background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+    color: #white;
+    font-size: 2em;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    a{
+      color: white;
+    }
   }
-}
-.btn-contact:hover{
-  margin-top: 20px; 
-  background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
-  box-shadow: 2px 2px 5px #F0F0F0;
-  color: #F1F1F1;
-  border: none;
-  font-size: 2em;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  a{
+  .btn-contact:hover{
+    margin-top: 20px; 
+    background-image: linear-gradient(to bottom right,#5189FF, #51FFB8);
+    box-shadow: 2px 2px 5px #F0F0F0;
     color: #F1F1F1;
+    border: none;
+    font-size: 2em;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    a{
+      color: #F1F1F1;
+    }
   }
 }
-
 //Contact Section Mobile
 
 
